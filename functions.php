@@ -4,6 +4,11 @@ namespace Prevencia;
 
 const VERSION = '1.0.0';
 
+/**
+ * Setup theme features.
+ *
+ * @return void
+ */
 function setup_theme() {
 	add_theme_support( 'post-thumbnails' );
 
@@ -27,7 +32,11 @@ function setup_theme() {
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme' );
 
-
+/**
+ * Register and enqueue assets.
+ *
+ * @return void
+ */
 function enqueue_assets() {
 	$in_footer = true;
 
@@ -124,6 +133,11 @@ function display_source() {
 	);
 }
 
+/**
+ * ადამიანური დრო.
+ *
+ * @return string
+ */
 function human_diff_time() {
 	printf(
 		/* translators: time */
