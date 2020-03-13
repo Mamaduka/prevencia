@@ -52,24 +52,24 @@
 				</select>
 			</div>
 			<div class="col-md-6">
-				<input class="form-control" title="შეავსეთ ველი" id='SERVICENAME' name='servicename'
+				<input class="form-control" title="შეავსეთ ველი" id='SERVICE_NAME' name='servicename'
 					placeholder='სერვისის დასახელება' required />
 			</div>
 			<div class="col-md-12">
 				<p>სერვისის/პროდუქტის ნამდვილობის გადასამოწმებლად, გთხოვთ მიუთითოთ ბმული თქვენი ვებგვერდიდან/FB გვერდიდან</p>
-				<input class="form-control" title="შეავსეთ ველი" name='COMPANYSITE' id='companysite'
+				<input class="form-control" title="შეავსეთ ველი" name='COMPANY_SITE' id='companysite'
 					placeholder="www.example.com" required />
 			</div>
 			<div class="col-md-12">
 				<textarea maxlength="600" class="form-control"
-					placeholder="აღწერე სერვისი (მაქსიმუმ 600 სიმბოლო)" title='შეავსეთ ველი' name="SERVICEDESC" id="servicedesc" required></textarea>
+					placeholder="აღწერე სერვისი (მაქსიმუმ 600 სიმბოლო)" title='შეავსეთ ველი' name="SERVICE_DESC" id="servicedesc" required></textarea>
 			</div>
 			<div class="col-md-6">
 				<input type='file' class="form-control" title="ატვირთე ლოგო" id='logo' name='LOGO'
 					placeholder='ატვირთეთ ლოგო' required />
 			</div>
 			<div class="col-md-6">
-				<input class="form-control" title="შეავსეთ ველი" id='duration' name='SERVICEDURATION'
+				<input class="form-control" title="შეავსეთ ველი" id='duration' name='SERVICE_DURATION'
 					placeholder='რა თარიღამდეა სერვისი ხელმისაწვდომი' required />
 			</div>
 
