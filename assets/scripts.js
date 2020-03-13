@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function ($) {
     $("#accordion").accordion({
         active: 999,
         collapsible: true

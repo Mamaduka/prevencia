@@ -29,7 +29,45 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme' );
 
 
 function enqueue_assets() {
-	wp_enqueue_style( 'prevencia-style', get_template_directory_uri() . '/main.css', [], VERSION );
+	$in_footer = true;
+
+	wp_register_style(
+		'prevencia-bootstrap-css',
+		'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css',
+		[],
+		'4.4.1'
+	);
+
+	wp_enqueue_style(
+		'prevencia-style',
+		get_template_directory_uri() . '/main.css',
+		[ 'prevencia-bootstrap-css' ],
+		VERSION
+	);
+
+	wp_register_script(
+		'prevencia-bootstrap-js',
+		'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js',
+		[ 'jquery' ],
+		'4.4.1',
+		$in_footer
+	);
+
+	wp_register_script(
+		'prevencia-jquery-validate',
+		'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js',
+		[ 'jquery' ],
+		'1.19.1',
+		$in_footer
+	);
+
+	wp_enqueue_script(
+		'prevencia-script',
+		get_template_directory_uri() . '/assets/scripts.js',
+		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'prevencia-jquery-validate' ],
+		VERSION,
+		$in_footer
+	);
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
 
