@@ -2,6 +2,8 @@
 
 namespace Prevencia;
 
+use HTML_Forms\Form;
+
 const VERSION = '1.0.0';
 
 /**
@@ -164,11 +166,30 @@ function get_archive_title() {
  * @return Form
  * @throws Exception
  */
-function get_form( $form_id ) {
-	$post = get_post( $form_id );
+function get_form( $form_id_or_slug ) {
+	if ( is_numeric( $form_id_or_slug ) || $form_id_or_slug instanceof \WP_Post ) {
+		$post = get_post( $form_id_or_slug );
 
-	if ( ! $post instanceof WP_Post || $post->post_type !== 'html-form' ) {
-		throw new Exception( 'Invalid form ID' );
+		if ( ! $post instanceof \WP_Post || $post->post_type !== 'html-form' ) {
+			throw new \Exception( 'Invalid form ID' );
+		}
+	} else {
+
+		$query = new \WP_Query;
+		$posts = $query->query(
+			array(
+				'post_type'           => 'html-form',
+				'name'                => $form_id_or_slug,
+				'post_status'         => 'publish',
+				'posts_per_page'      => 1,
+				'ignore_sticky_posts' => true,
+				'no_found_rows'       => true,
+			)
+		);
+		if ( empty( $posts ) ) {
+			throw new \Exception( 'Invalid form slug' );
+		}
+		$post = $posts[0];
 	}
 
 	$default_settings = array(
@@ -188,11 +209,16 @@ function get_form( $form_id ) {
 	);
 	$default_messages = apply_filters( 'hf_form_default_messages', $default_messages );
 
+	$markup = '';
+	ob_start();
+	get_template_part( 'partials/form', 'markup' );
+	$markup = ob_get_clean();
+
 	// finally, create form instance
 	$form           = new Form( $post->ID );
 	$form->title    = $post->post_title;
 	$form->slug     = $post->post_name;
-	$form->markup   = $post->post_content;
+	$form->markup   = $markup;
 	$form->settings = $default_settings;
 	$form->messages = $default_messages;
 

@@ -65,8 +65,11 @@
 					placeholder="აღწერე სერვისი (მაქსიმუმ 600 სიმბოლო)" title='შეავსეთ ველი' name="SERVICE_DESC" id="servicedesc" required></textarea>
 			</div>
 			<div class="col-md-6">
-				<input type='file' class="form-control" title="ატვირთე ლოგო" id='logo' name='LOGO'
-					placeholder='ატვირთეთ ლოგო' required />
+				<input type='file' class="form-control" title="ატვირთე ლოგო" id='logo' name='LOGO' placeholder='ატვირთეთ ლოგო' />
+				<div class="fake-input">
+					<div class='uploaded'>ატვირთეთ თქვენი ლოგო</div>
+					<span>ატვირთვა</span>
+				</div>
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" title="შეავსეთ ველი" id='duration' name='SERVICE_DURATION'

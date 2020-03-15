@@ -363,23 +363,28 @@ h3.header{
 
 /************** SERVICE FORM **************/
 
+.hf-form,
 #serviceForm{
     margin-bottom: 80px;
 }
 
+.hf-form .error,
 #serviceForm .error{
     border-color: red !important;
 }
 
+.hf-form button,
 #serviceForm button{
     height: 74px;
     width: 200px;
 }
 
+.hf-form label.error,
 #serviceForm label.error{
     transform: translateY(-20px)
 }
 
+.hf-form input,
 #serviceForm input{
     padding: 40px 30px;
     border-radius: 10px;
@@ -389,6 +394,7 @@ h3.header{
     margin-bottom: 30px;
 }
 
+.hf-form div.fake-input,
 #serviceForm div.fake-input{
   padding: 40px 30px;
   border-radius: 10px;
@@ -400,10 +406,12 @@ h3.header{
   cursor: pointer;
 }
 
+.hf-form #logo,
 #fileInput{
   display: none;
 }
 
+.hf-form div.fake-input span,
 #serviceForm div.fake-input span{
    background: #F2F4F7;
    display: inline-block;
@@ -414,6 +422,7 @@ h3.header{
    top: 14px;
 }
 
+.hf-form input[type='submit'],
 #serviceForm input[type='submit']{
     width: 250px;
     height: 74px;
@@ -422,9 +431,8 @@ h3.header{
     font-size: 18px;
 }
 
-
-
-#serviceForm select{
+.hf-form select,
+#serviceForm select {
     outline: none;
     box-shadow: none !important;
     border-radius: 10px;
@@ -433,7 +441,8 @@ h3.header{
     margin-bottom: 30px;
 }
 
-#serviceForm textarea{
+.hf-form textarea,
+#serviceForm textarea {
     resize: none;
     border-radius: 10px;
     padding:30px;
@@ -443,7 +452,8 @@ h3.header{
     margin-bottom: 30px;
 }
 
-#serviceForm .block{
+.hf-form .block,
+#serviceForm .block {
     margin-top: 30px;
 }
 

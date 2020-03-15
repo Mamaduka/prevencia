@@ -1,4 +1,4 @@
 <div class="container sercive-form">
 	<h3 class="header">დისტანციური სერვისის დამატება</h3>
-	<?php echo hf_get_form( 'add-service' ); ?>
+	<?php echo Prevencia\get_form( 'add-service' ); ?>
 </div>

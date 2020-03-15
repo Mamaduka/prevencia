@@ -45,14 +45,13 @@ jQuery(function ($) {
         }, 700);
     });
 
-    $("#serviceForm div.fake-input").click(function () {
-
-        $("#fileInput").click();
+    $(".hf-form div.fake-input").click(function () {
+        $("#logo").click();
     });
 
 
-    if(document.getElementById('fileInput')){
-        document.getElementById('fileInput').addEventListener('change', function(ev){
+    if(document.getElementById('logo')){
+        document.getElementById('logo').addEventListener('change', function(ev){
             $('.uploaded').text('თქვენი ფაილი აიტვირთა')
         });
     }
