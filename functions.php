@@ -49,7 +49,7 @@ function enqueue_assets() {
 
 	wp_enqueue_style(
 		'prevencia-style',
-		get_template_directory_uri() . '/assets/css/style.css',
+		get_template_directory_uri() . '/main.css',
 		[ 'prevencia-bootstrap-css' ],
 		VERSION
 	);
