@@ -83,6 +83,16 @@ function enqueue_assets() {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
 
 /**
+ * Adds tracking code to the site.
+ *
+ * @return void
+ */
+function inject_tracking_codes() {
+	get_template_part( 'partials/traking' );
+}
+add_action( 'wp_head', __NAMESPACE__ . '\\inject_tracking_codes' );
+
+/**
  * Adjust the excerpt length.
  *
  * @param int $length
