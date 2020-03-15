@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: helvetica-regular;
     src: url('assets/fonts/helvetica-regular.otf');
@@ -14,9 +15,17 @@
   }
 
 
+
+
   body{
-      font-family: helvetica-regular !important;
+      font-family: helvetica-regular !important; 
       padding-bottom: 50px;
+  }
+  
+  body.open .logo img,
+  body.open .b-container{
+      position: fixed !important;
+      z-index: 999;
   }
 
   ul{
@@ -241,6 +250,10 @@ h3.header{
    
 }
 
+.fake-news p.excerpt{
+  margin-top: 15px;
+}
+
 .fake-news .fake-item{
     border: 1px solid #DBDCDE;
     padding: 30px 25px;
@@ -252,10 +265,12 @@ h3.header{
 
 .fake-news .fake-item .image{
     display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 180px;
     width: 100%;
     border-radius: 5px;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 .fake-news .fake-item .date{
@@ -309,14 +324,13 @@ h3.header{
 
 #accordion .heading{
     background:#F2F4F7;
+    color: black !important;
     cursor: pointer;
     outline: none;
     position: relative;
     font-size: 22px;
     font-family: helvetica-medium;
-}
-
-#accordion .heading{
+    border: none !important;
     padding: 30px 40px;
     border-radius: 10px; 
     margin: 10px 0;
@@ -343,7 +357,7 @@ h3.header{
     padding: 0 40px 30px 40px;
     background:#F2F4F7;
     margin-top: -16px;
-
+    font-family: helvetica-regular;
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
 }
@@ -367,7 +381,6 @@ h3.header{
     transform: translateY(-20px)
 }
 
-.hf-form input,
 #serviceForm input{
     padding: 40px 30px;
     border-radius: 10px;
@@ -377,7 +390,31 @@ h3.header{
     margin-bottom: 30px;
 }
 
-.hf-form input[type='submit'],
+#serviceForm div.fake-input{
+  padding: 40px 30px;
+  border-radius: 10px;
+  border: 1px solid #D5D5D5;
+  outline: none;
+  box-shadow: none !important;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+#fileInput{
+  display: none;
+}
+
+#serviceForm div.fake-input span{
+   background: #F2F4F7;
+   display: inline-block;
+   border-radius: 10px;
+   padding: 15px 20px;
+   position: absolute;
+   right: 20px;
+   top: 14px;
+}
+
 #serviceForm input[type='submit']{
     width: 250px;
     height: 74px;
@@ -386,7 +423,8 @@ h3.header{
     font-size: 18px;
 }
 
-.hf-form select,
+
+
 #serviceForm select{
     outline: none;
     box-shadow: none !important;
@@ -396,7 +434,6 @@ h3.header{
     margin-bottom: 30px;
 }
 
-.hf-form textarea,
 #serviceForm textarea{
     resize: none;
     border-radius: 10px;
@@ -407,7 +444,6 @@ h3.header{
     margin-bottom: 30px;
 }
 
-.hf-form .block
 #serviceForm .block{
     margin-top: 30px;
 }
@@ -481,12 +517,16 @@ h3.header{
     max-width: 100% !important;
 }
 
+
+
 .blog-inner-container .image{
     width: 100%;
     height: 440px;
     border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-bottom: 30px;
-    object-fit: cover;
 }
 
 
@@ -507,6 +547,21 @@ h3.header{
     font-family: helvetica-medium;
 }
 
+.font15{
+  font-size: 15px !important;
+}
+
+.font14{
+  font-size: 14px !important;
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1200px){
+    .desription,
+    .font14{
+        font-size: 13px !important;
+    }
+}
+
 
 
 @media (max-width: 1368px){
@@ -522,6 +577,11 @@ h3.header{
 @media (max-width: 1024px){
     .items-container {
         flex-direction: column;
+    }
+    
+    .logo img{
+        position: relative;
+        z-index: 9999;
     }
 
     .b-container{
@@ -571,13 +631,135 @@ h3.header{
    }
 }
 
+.show-on-mobile{
+  display: none;
+}
+
 @media (max-width: 480px){
+  .items-container{
+    padding-bottom: 20px;
+  }
+
+  div.main-block{
+    background-position: -15px -215px;
+  }
+
+  .main-block .content{
+    padding: 0;
+  }
+
+  .show-on-mobile{
+    display: inline;
+  }
+
+  .hide-on-mobile{
+    display: none;
+  }
+
+  .blog-inner-container .image{
+    background-size: contain;
+    height: 170px;
+  }
+
+  .uploaded{
+    font-size: 13px;
+    left:  10px;
+    color:#495057;
+  }
+
+  footer .menu li{
+    margin-right: 15px;
+  }
+
+
     .logo img{
-        max-width: 200px;
+        max-width: 180px;
         position: relative;
         z-index: 9999;
     }
+
+    .offers .add-item p.description{
+      margin-top: 40px;
+      font-size: 24px;
+    }
+
+    .offers .add-item .add-circle{
+      width: 60px;
+      height: 60px;
+    }
+
+    .offers .add-item .add-circle img{
+      width: 20px;
+      
+    }
+
+  
+    .offers .add-item{
+      height: 230px !important;
+    }
+
+    .main-block .content .subtitle{
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .main-block .statistics{
+      padding: 20px 0;
+      display: none;
+    }
+
+    .main-block .content h3{
+      font-size: 30px;
+    }
+
+    .offers .offer-item{
+      padding: 20px;
+    }
+
+    .offer-item{
+      height: unset;
+    }
+
+    .fake-news .fake-item .seemore{
+      bottom: 15px;
+    }
+
+    .text-container{
+      padding: 0;
+    }
+
+    #accordion .desc{
+      height: unset !important;
+    }
+
+    #serviceForm button{
+      display: block;
+      margin: 0 auto;
+  }
+
+  .blog-inner-container{
+    padding: 0;
+  
 }
+
+.blog-inner-container .title{
+  font-size: 24px;
+}
+
+.blog-inner-container .title,
+.blog-inner-container .top .fakenews{
+  font-size: 16px;
+  
+}
+
+.blog-inner-container .top .date{
+  margin-left: 20px;
+}
+}
+
+
+
+
 
 
 
@@ -661,7 +843,7 @@ h3.header{
     height: 100%;
     position: fixed;
     top: 0;
-    padding-top: 120px;
+    padding-top: 140px;
     left: 0;
   }
   .b-nav.open li {
@@ -671,6 +853,7 @@ h3.header{
             animation-fill-mode: both;
     -webkit-animation-name: slideInLeft;
             animation-name: slideInLeft;
+            margin-bottom: 10px;
   }
   
   .b-link {
@@ -775,3 +958,29 @@ h3.header{
     color: #444444;
   }
   
+  #successBlock{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+#successBlock img{
+    display: inline-block;
+    margin: 15px 0;
+}
+
+  .uploaded{
+    position: absolute;
+    left: 20px;
+    top: 27px;
+  }
+
+  .flex-show{
+    display: flex !important;
+  }
+
+  .ui-icon-triangle-1-e,
+  .ui-state-active .ui-icon, .ui-button:active .ui-icon{
+    display: none !important;
+  }

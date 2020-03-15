@@ -49,7 +49,7 @@ function enqueue_assets() {
 
 	wp_enqueue_style(
 		'prevencia-style',
-		get_template_directory_uri() . '/main.css',
+		get_template_directory_uri() . '/assets/css/style.css',
 		[ 'prevencia-bootstrap-css' ],
 		VERSION
 	);
@@ -72,7 +72,7 @@ function enqueue_assets() {
 
 	wp_enqueue_script(
 		'prevencia-script',
-		get_template_directory_uri() . '/assets/scripts.js',
+		get_template_directory_uri() . '/assets/js/scripts.js',
 		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'prevencia-jquery-validate' ],
 		VERSION,
 		$in_footer
@@ -157,4 +157,44 @@ function get_archive_title() {
 	}
 
 	return 'ყალბი სიახლეები';
+}
+
+/**
+ * @param int $form_id
+ * @return Form
+ * @throws Exception
+ */
+function get_form( $form_id ) {
+	$post = get_post( $form_id );
+
+	if ( ! $post instanceof WP_Post || $post->post_type !== 'html-form' ) {
+		throw new Exception( 'Invalid form ID' );
+	}
+
+	$default_settings = array(
+		'save_submissions'   => 1,
+		'hide_after_success' => 0,
+		'redirect_url'       => '',
+		'required_fields'    => '',
+		'email_fields'       => '',
+	);
+	$default_settings = apply_filters( 'hf_form_default_settings', $default_settings );
+
+	$default_messages = array(
+		'success'                => __( 'Thank you! We will be in touch soon.', 'html-forms' ),
+		'invalid_email'          => __( 'Sorry, that email address looks invalid.', 'html-forms' ),
+		'required_field_missing' => __( 'Please fill in the required fields.', 'html-forms' ),
+		'error'                  => __( 'Oops. An error occurred.', 'html-forms' ),
+	);
+	$default_messages = apply_filters( 'hf_form_default_messages', $default_messages );
+
+	// finally, create form instance
+	$form           = new Form( $post->ID );
+	$form->title    = $post->post_title;
+	$form->slug     = $post->post_name;
+	$form->markup   = $post->post_content;
+	$form->settings = $default_settings;
+	$form->messages = $default_messages;
+
+	return $form;
 }
