@@ -16,7 +16,7 @@
 		</div>
 	</div>
 
-	<div style="navigation">
+	<div>
 		<!-- Navigation -->
 		<div class="b-nav">
 			<li><a class="b-link main-link" href="#">მთავარი</a></li>

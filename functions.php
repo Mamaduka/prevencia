@@ -87,7 +87,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
  * @return int
  */
 function excerpt_length( $length ) {
-	return 15;
+	return 5;
 }
 add_filter( 'excerpt_length', __NAMESPACE__ . '\\excerpt_length' );
 

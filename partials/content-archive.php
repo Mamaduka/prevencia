@@ -9,7 +9,7 @@
 		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
 		<div class='seemore'>
 			<a href="<?php the_permalink(); ?>">
-				<span class="circle"><img src="<?php echo Prevencia\the_asset('/img/angle.png'); ?>" alt="angle" /></span><span>სრულად ნახვა</span>
+				<span class="circle"><img src="<?php echo Prevencia\the_asset('/img/angle.png'); ?>" alt="angle" /></span> <span>სრულად ნახვა</span>
 			</a>
 		</div>
 	</div>

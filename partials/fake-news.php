@@ -19,6 +19,8 @@
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 			</div>
+
+			<a href="<?php echo get_post_type_archive_link( 'fake-news' ); ?>" class="light-btn">ყველას ნახვა</a>
 		<?php endif; ?>
 	</div>
 </div>
