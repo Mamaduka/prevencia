@@ -20,23 +20,23 @@
 
 				<div class="item">
 					<p class='subtitle'>დადასტურებული შემთხვევა</p>
-					<div class="count">25</div>
+					<div class="count">30</div>
 				</div>
 
 				<div class="item">
 					<p class='subtitle'>კარანტინის რეჟიმში</p>
-					<div class="count">235</div>
+					<div class="count">439</div>
 				</div>
 
 				<div class="item">
 					<p class='subtitle'>სტაციონარში მყოფი</p>
-					<div class="count">58</div>
+					<div class="count">64</div>
 				</div>
 				<hr />
 
 				<div class="item">
 					<p class='subtitle'>ბოლოს განახლებული</p>
-					<div class="date">23:50 სთ / 12 მარტი <span class="stopcov"><a href='https://stopcov.ge/'
+					<div class="date">16:00 სთ / 15 მარტი <span class="stopcov"><a href='https://stopcov.ge/'
 								target="_blank">წყარო: stopcov.ge</a></div>
 				</div>
 			</div>
