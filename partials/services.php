@@ -22,7 +22,7 @@
 						<a class="add-circle">
 							<img src="<?php echo Prevencia\the_asset('/img/plus.png'); ?>" alt='plus' />
 						</a>
-						<span class="description">დაამატე სერვისი</span>
+						<p class="description">დაამატე სერვისი</p>
 					</div>
 				</div>
 
