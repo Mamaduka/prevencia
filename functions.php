@@ -192,21 +192,21 @@ function get_form( $form_id_or_slug ) {
 		$post = $posts[0];
 	}
 
-	$default_settings = array(
+	$default_settings = [
 		'save_submissions'   => 1,
 		'hide_after_success' => 0,
 		'redirect_url'       => '',
 		'required_fields'    => '',
 		'email_fields'       => '',
-	);
+	];
 	$default_settings = apply_filters( 'hf_form_default_settings', $default_settings );
 
-	$default_messages = array(
-		'success'                => __( 'Thank you! We will be in touch soon.', 'html-forms' ),
-		'invalid_email'          => __( 'Sorry, that email address looks invalid.', 'html-forms' ),
-		'required_field_missing' => __( 'Please fill in the required fields.', 'html-forms' ),
-		'error'                  => __( 'Oops. An error occurred.', 'html-forms' ),
-	);
+	$default_messages = [
+		'success'                => 'თქვენი განაცხადი წარმატებით გაიგზავნა',
+		'invalid_email'          => 'თქვენი ელ. ფოსტა არასწორია',
+		'required_field_missing' => 'გთხოვთ შეავსოთ ყველა სავალდებულო ველი',
+		'error'                  => 'დაფიქსირდა შეცდომა',
+	];
 	$default_messages = apply_filters( 'hf_form_default_messages', $default_messages );
 
 	$markup = '';

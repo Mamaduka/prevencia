@@ -968,29 +968,35 @@ h3.header{
     color: #444444;
   }
 
-  #successBlock{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+#successBlock{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 #successBlock img{
     display: inline-block;
     margin: 15px 0;
 }
 
-  .uploaded{
-    position: absolute;
-    left: 20px;
-    top: 27px;
-  }
+.hf-message {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-  .flex-show{
-    display: flex !important;
-  }
+.uploaded{
+  position: absolute;
+  left: 20px;
+  top: 27px;
+}
 
-  .ui-icon-triangle-1-e,
-  .ui-state-active .ui-icon, .ui-button:active .ui-icon{
-    display: none !important;
-  }
+.flex-show {
+  display: flex !important;
+}
+
+.ui-icon-triangle-1-e,
+.ui-state-active .ui-icon, .ui-button:active .ui-icon{
+  display: none !important;
+}
