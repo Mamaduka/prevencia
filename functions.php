@@ -168,7 +168,7 @@ function get_archive_title() {
 		return 'სიახლეები';
 	}
 
-	return 'ყალბი სიახლეები';
+	return 'ყალბი ამბები';
 }
 
 /**

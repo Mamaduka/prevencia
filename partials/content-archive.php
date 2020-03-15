@@ -6,7 +6,7 @@
 			</a>
 		<?php endif; ?>
 		<p class='date'><?php echo wp_date( 'F j, Y' ); ?></p>
-		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+		<p class="excerpt"><?php the_title(); ?></p>
 		<div class='seemore'>
 			<a href="<?php the_permalink(); ?>">
 				<span class="circle"><img src="<?php echo Prevencia\the_asset('/img/angle.png'); ?>" alt="angle" /></span> <span>სრულად ნახვა</span>
