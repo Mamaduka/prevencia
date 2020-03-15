@@ -1,3 +1,7 @@
+<?php
+$page_id = get_queried_object_id();
+?>
+
 <div class='container'>
 	<div class="items-container">
 		<div class='content'>
@@ -20,23 +24,23 @@
 
 				<div class="item">
 					<p class='subtitle'>დადასტურებული შემთხვევა</p>
-					<div class="count">30</div>
+					<div class="count"><?php the_field( 'dadasturebuli', $page_id ); ?></div>
 				</div>
 
 				<div class="item">
 					<p class='subtitle'>კარანტინის რეჟიმში</p>
-					<div class="count">439</div>
+					<div class="count"><?php the_field( 'karantini', $page_id ); ?></div>
 				</div>
 
 				<div class="item">
 					<p class='subtitle'>სტაციონარში მყოფი</p>
-					<div class="count">64</div>
+					<div class="count"><?php the_field( 'statsionari', $page_id ); ?></div>
 				</div>
 				<hr />
 
 				<div class="item">
 					<p class='subtitle'>ბოლოს განახლებული</p>
-					<div class="date">16:00 სთ / 15 მარტი <span class="stopcov"><a href='https://stopcov.ge/'
+					<div class="date"><?php echo get_the_modified_date( 'G:i / j F'); ?> <span class="stopcov"><a href='https://stopcov.ge/'
 								target="_blank">წყარო: stopcov.ge</a></div>
 				</div>
 			</div>
