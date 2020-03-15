@@ -1,11 +1,12 @@
 <?php
 	$fake_news = new WP_Query( [
-		'post_type'           => 'fake-news',
-		'post_status'         => 'publish',
-		'posts_per_page'      => 3,
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-		'order'               => 'DESC',
+		'post_type'              => 'fake-news',
+		'post_status'            => 'publish',
+		'posts_per_page'         => 3,
+		'ignore_sticky_posts'    => true,
+		'no_found_rows'          => true,
+		'order'                  => 'DESC',
+		'update_post_term_cache' => false,
 	] );
 ?>
 

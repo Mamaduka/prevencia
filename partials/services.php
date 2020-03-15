@@ -1,11 +1,12 @@
 <?php
 	$services = new WP_Query( [
-		'post_type'           => 'service',
-		'post_status'         => 'publish',
-		'posts_per_page'      => 50,
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-		'order'               => 'ASC',
+		'post_type'              => 'service',
+		'post_status'            => 'publish',
+		'posts_per_page'         => 50,
+		'ignore_sticky_posts'    => true,
+		'no_found_rows'          => true,
+		'order'                  => 'ASC',
+		'update_post_term_cache' => false,
 	] );
 ?>
 
@@ -21,9 +22,7 @@
 						<a class="add-circle">
 							<img src="<?php echo Prevencia\the_asset('/img/plus.png'); ?>" alt='plus' />
 						</a>
-						<p class="description">
-							დაამატე სერვისი
-						</p>
+						<span class="description">დაამატე სერვისი</span>
 					</div>
 				</div>
 
@@ -35,9 +34,7 @@
 								<?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'img-fluid' ] ); ?>
 							<?php endif; ?>
 							<p class="company-title"><?php the_title(); ?></p>
-							<p class="desription">
-								<?php the_content(); ?>
-							</p>
+							<span class="desription"><?php the_content(); ?></span>
 						</div>
 					</div>
 
