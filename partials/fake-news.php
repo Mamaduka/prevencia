@@ -2,7 +2,7 @@
 	$fake_news = new WP_Query( [
 		'post_type'              => 'fake-news',
 		'post_status'            => 'publish',
-		'posts_per_page'         => 3,
+		'posts_per_page'         => 6,
 		'ignore_sticky_posts'    => true,
 		'no_found_rows'          => true,
 		'order'                  => 'DESC',
