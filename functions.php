@@ -4,7 +4,7 @@ namespace Prevencia;
 
 use HTML_Forms\Form;
 
-const VERSION = '1.0.0';
+const VERSION = '150320';
 
 /**
  * Setup theme features.

@@ -5,7 +5,6 @@
 		'posts_per_page'         => 50,
 		'ignore_sticky_posts'    => true,
 		'no_found_rows'          => true,
-		'order'                  => 'ASC',
 		'update_post_term_cache' => false,
 	] );
 ?>

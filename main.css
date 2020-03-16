@@ -260,6 +260,7 @@ h3.header{
     background: #fff;
     min-height: 418px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .fake-news .fake-item .image{
