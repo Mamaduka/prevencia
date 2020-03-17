@@ -51,7 +51,7 @@ function enqueue_assets() {
 
 	wp_enqueue_style(
 		'prevencia-style',
-		get_template_directory_uri() . '/main.css',
+		get_template_directory_uri() . '/assets/css/main.min.css',
 		[ 'prevencia-bootstrap-css' ],
 		VERSION
 	);
@@ -66,7 +66,7 @@ function enqueue_assets() {
 
 	wp_enqueue_script(
 		'prevencia-script',
-		get_template_directory_uri() . '/assets/js/scripts.js',
+		get_template_directory_uri() . '/assets/js/scripts.min.js',
 		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js' ],
 		VERSION,
 		$in_footer
