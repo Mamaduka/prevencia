@@ -1,7 +1,3 @@
-<?php
-$page_id = get_queried_object_id();
-?>
-
 <div class='container'>
 	<div class="items-container">
 		<div class='content'>
@@ -24,17 +20,17 @@ $page_id = get_queried_object_id();
 
 				<div class="item">
 					<p class='subtitle'>დადასტურებული შემთხვევა</p>
-					<div class="count"><?php the_field( 'dadasturebuli', $page_id ); ?></div>
+					<div class="count"><?php echo Prevencia\get_stat( 'dadasturebuli' ); ?></div>
 				</div>
 
 				<div class="item">
 					<p class='subtitle'>კარანტინის რეჟიმში</p>
-					<div class="count"><?php the_field( 'karantini', $page_id ); ?></div>
+					<div class="count"><?php echo Prevencia\get_stat( 'karantini' ); ?></div>
 				</div>
 
 				<div class="item">
 					<p class='subtitle'>სტაციონარში მყოფი</p>
-					<div class="count"><?php the_field( 'statsionari', $page_id ); ?></div>
+					<div class="count"><?php echo Prevencia\get_stat( 'statsionari' ); ?></div>
 				</div>
 				<hr />
 

@@ -164,65 +164,14 @@ function get_archive_title() {
 }
 
 /**
- * @param int $form_id
- * @return Form
- * @throws Exception
+ * Get the statistics
+ *
+ * @param string $key
+ * @param int $post_id
+ * @return int
  */
-function get_form( $form_id_or_slug ) {
-	if ( is_numeric( $form_id_or_slug ) || $form_id_or_slug instanceof \WP_Post ) {
-		$post = get_post( $form_id_or_slug );
+function get_stat( $key = null, $post_id = null ) {
+	$post = get_post( $post_id );
 
-		if ( ! $post instanceof \WP_Post || $post->post_type !== 'html-form' ) {
-			throw new \Exception( 'Invalid form ID' );
-		}
-	} else {
-
-		$query = new \WP_Query;
-		$posts = $query->query(
-			array(
-				'post_type'           => 'html-form',
-				'name'                => $form_id_or_slug,
-				'post_status'         => 'publish',
-				'posts_per_page'      => 1,
-				'ignore_sticky_posts' => true,
-				'no_found_rows'       => true,
-			)
-		);
-		if ( empty( $posts ) ) {
-			throw new \Exception( 'Invalid form slug' );
-		}
-		$post = $posts[0];
-	}
-
-	$default_settings = [
-		'save_submissions'   => 1,
-		'hide_after_success' => 0,
-		'redirect_url'       => '',
-		'required_fields'    => '',
-		'email_fields'       => '',
-	];
-	$default_settings = apply_filters( 'hf_form_default_settings', $default_settings );
-
-	$default_messages = [
-		'success'                => 'თქვენი განაცხადი წარმატებით გაიგზავნა',
-		'invalid_email'          => 'თქვენი ელ. ფოსტა არასწორია',
-		'required_field_missing' => 'გთხოვთ შეავსოთ ყველა სავალდებულო ველი',
-		'error'                  => 'დაფიქსირდა შეცდომა',
-	];
-	$default_messages = apply_filters( 'hf_form_default_messages', $default_messages );
-
-	$markup = '';
-	ob_start();
-	get_template_part( 'partials/form', 'markup' );
-	$markup = ob_get_clean();
-
-	// finally, create form instance
-	$form           = new Form( $post->ID );
-	$form->title    = $post->post_title;
-	$form->slug     = $post->post_name;
-	$form->markup   = $markup;
-	$form->settings = $default_settings;
-	$form->messages = $default_messages;
-
-	return $form;
+	return (int) get_post_meta( $post->ID, $key, true );
 }
