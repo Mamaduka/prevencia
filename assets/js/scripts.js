@@ -80,9 +80,11 @@ jQuery(function ($) {
 
 	if ( window.innerWidth < 768 ) {
 		$(".offers .offer-item .description").after("<button class='btn btn-link show-all' style='padding-left: 0;'>წაიკითხე სრულად...</button>");
-	
+
 		$('button.show-all').click(function () {
-			$(this).parent().find('.description').removeClass('line-clamp');
+			var self = $(this);
+			self.closest('div').find('.description span').slideDown();
+			$(self).hide();
 		});
 	}
 });

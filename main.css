@@ -658,11 +658,12 @@ button.show-all{
 
 
 @media (max-width: 768px){
-  .offers .offer-item .line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .offers .offer-item .description .more-text {
+    display: none;
+  }
+
+  .offers .offer-item .company-title{
+    text-align: center;
   }
 
   button.show-all{
