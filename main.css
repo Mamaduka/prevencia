@@ -567,13 +567,19 @@ h3.header{
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1200px){
-    .desription,
+    .description,
     .font14{
         font-size: 13px !important;
     }
 }
 
-
+@media only screen and (max-width: 1200px) and (min-width: 768px){
+  .col-md-4{
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: unset !important;
+  }
+}
 
 @media (max-width: 1368px){
     .menu li{
@@ -644,6 +650,25 @@ h3.header{
 
 .show-on-mobile{
   display: none;
+}
+
+button.show-all{
+  display: none;
+}
+
+
+@media (max-width: 768px){
+  .offers .offer-item .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  button.show-all{
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px){

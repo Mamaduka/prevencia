@@ -33,7 +33,7 @@
 								<?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'img-fluid' ] ); ?>
 							<?php endif; ?>
 							<p class="company-title"><?php the_title(); ?></p>
-							<span class="desription"><?php the_content(); ?></span>
+							<span class="description line-clamp"><?php the_content(); ?></span>
 						</div>
 					</div>
 

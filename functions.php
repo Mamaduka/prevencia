@@ -4,7 +4,7 @@ namespace Prevencia;
 
 use HTML_Forms\Form;
 
-const VERSION = '150320';
+const VERSION = '170320';
 
 /**
  * Setup theme features.
@@ -64,18 +64,10 @@ function enqueue_assets() {
 		$in_footer
 	);
 
-	wp_register_script(
-		'prevencia-jquery-validate',
-		'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js',
-		[ 'jquery' ],
-		'1.19.1',
-		$in_footer
-	);
-
 	wp_enqueue_script(
 		'prevencia-script',
 		get_template_directory_uri() . '/assets/js/scripts.js',
-		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'prevencia-jquery-validate' ],
+		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js' ],
 		VERSION,
 		$in_footer
 	);
