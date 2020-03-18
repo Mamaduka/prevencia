@@ -156,11 +156,13 @@ function human_diff_time() {
  * @return string
  */
 function get_archive_title() {
-	if ( get_post_type() !== 'fake-news' ) {
-		return 'სიახლეები';
-	}
+	$post_type = get_post_type();
+	$titles = [
+		'fake-news' => 'ყალბი ამბები',
+		'service'   => 'დისტანციური სერვისები',
+	];
 
-	return 'ყალბი ამბები';
+	return isset( $titles[ $post_type ] ) ? $titles[ $post_type ] : 'სიახლეები';
 }
 
 /**
