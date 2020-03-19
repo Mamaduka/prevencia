@@ -32,6 +32,10 @@
 			<input class="form-control" title="შეავსეთ ველი" id='email' name='EMAIL' placeholder='ელ. ფოსტა'
 				required />
 		</div>
+		<div class="col-md-6">
+			<input class="form-control" title="შეავსეთ ველი" id='phone' name='PHONE'
+				placeholder='ტელეფონის ნომერი' required />
+		</div>
 	</div>
 </div>
 
