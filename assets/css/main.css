@@ -782,12 +782,6 @@ button.show-all {
   }
 }
 
-
-
-
-
-
-
 /*************** BURGER MENU ******************/
 
 @-webkit-keyframes slideInLeft {
@@ -1034,4 +1028,33 @@ button.show-all {
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
   display: none !important;
+}
+
+/** FacetWP **/
+.offers .facetwp-type-radio {
+  display: flex;
+}
+
+.offers .facetwp-radio {
+  background: none;
+  background-image: none;
+  color: #2d3748;
+  background-color: #edf2f7;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 0;
+}
+
+.offers .facetwp-radio:not(:last-child) {
+  margin-right: 10px;
+}
+
+.offers .facetwp-radio:hover,
+.offers .facetwp-radio.checked {
+  background-color: #cbd5e0;
+  background-image: none;
+}
+
+.offers .facetwp-radio span {
+  display: none;
 }
