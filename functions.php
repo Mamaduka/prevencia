@@ -105,6 +105,19 @@ function excerpt_more( $more ) {
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\excerpt_more' );
 
 /**
+ * Apply Bootstrap class to FaceWP dropdown.
+ *
+ * @param string $output
+ * @param array $params
+ */
+add_filter( 'facetwp_facet_html', function( $output, $params ) {
+	if ( 'dropdown' == $params['facet']['type'] ) {
+		$output = str_replace( 'facetwp-dropdown', 'facetwp-dropdown form-control', $output );
+	}
+	return $output;
+}, 10, 2 );
+
+/**
  * Helper function for getting asset URLs.
  *
  * @param string $path Eg. '/img/angle.png'.
