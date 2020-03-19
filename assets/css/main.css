@@ -1036,11 +1036,11 @@ button.show-all {
 }
 
 .offers .facetwp-radio {
-  background: none;
+  background: #f8f9fb;
   background-image: none;
   color: #2d3748;
-  background-color: #edf2f7;
-  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 10px;
   padding: 15px;
   margin-bottom: 0;
 }
@@ -1051,8 +1051,8 @@ button.show-all {
 
 .offers .facetwp-radio:hover,
 .offers .facetwp-radio.checked {
-  background-color: #cbd5e0;
   background-image: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .offers .facetwp-radio span {
