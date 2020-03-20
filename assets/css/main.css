@@ -38,7 +38,7 @@ ul {
 
 .light-btn {
   border-radius: 30px !important;
-  border: 1px solid #D6D6D6 important;
+  border: 1px solid #D6D6D6 ! important;
   padding: 10px !important;
   background: white;
   width: 200px;
@@ -48,6 +48,9 @@ ul {
   color: inherit !important;
   text-decoration: none !important;
   font-size: 20px;
+}
+.offers .light-btn {
+  margin: 0 auto 35px;
 }
 
 h3.header {
@@ -1028,33 +1031,4 @@ button.show-all {
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
   display: none !important;
-}
-
-/** FacetWP **/
-.offers .facetwp-type-radio {
-  display: flex;
-}
-
-.offers .facetwp-radio {
-  background: #f8f9fb;
-  background-image: none;
-  color: #2d3748;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 0;
-}
-
-.offers .facetwp-radio:not(:last-child) {
-  margin-right: 10px;
-}
-
-.offers .facetwp-radio:hover,
-.offers .facetwp-radio.checked {
-  background-image: none;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-}
-
-.offers .facetwp-radio span {
-  display: none;
 }

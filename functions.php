@@ -2,7 +2,7 @@
 
 namespace Prevencia;
 
-const VERSION = '190320';
+const VERSION = '200320';
 
 /**
  * Setup theme features.
@@ -187,4 +187,37 @@ function get_stat( $key = null, $post_id = null ) {
 	$post = get_post( $post_id );
 
 	return (int) get_post_meta( $post->ID, $key, true );
+}
+
+/**
+ * Display pagination with Bootstrap styling.
+ *
+ * @return string
+ */
+function get_the_pagination() {
+	$pagination = '';
+
+	// Don't print empty markup if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
+		$pages = paginate_links( [
+			'type'               => 'array',
+			'mid_size'           => 1,
+			'prev_text'          => _x( 'Previous', 'previous set of posts' ),
+			'next_text'          => _x( 'Next', 'next set of posts' )
+		] );
+	}
+
+	$template = '
+	<nav class="navigation" role="navigation" aria-label="%2$s">
+		<ul class="pagination pagination-lg justify-content-center">%1$s</ul>
+	</nav>';
+
+	foreach ( $pages as $page ) {
+		$pagination .= sprintf(
+			'<li class="page-item">%s</li>',
+			str_replace( 'page-numbers', 'page-link', $page )
+		);
+	}
+
+	return sprintf( $template, $pagination, 'Navigation' );
 }
