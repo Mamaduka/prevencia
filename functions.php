@@ -213,9 +213,12 @@ function get_the_pagination() {
 	</nav>';
 
 	foreach ( $pages as $page ) {
+		$disabled = ( strpos( $page, 'current' ) !== false ) ? 'disabled' : '';
+
 		$pagination .= sprintf(
-			'<li class="page-item">%s</li>',
-			str_replace( 'page-numbers', 'page-link', $page )
+			'<li class="page-item %2$s">%1$s</li>',
+			str_replace( 'page-numbers', 'page-link', $page ),
+			$disabled
 		);
 	}
 
