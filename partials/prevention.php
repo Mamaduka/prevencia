@@ -24,6 +24,11 @@
 				</div>
 
 				<div class="item">
+					<p class='subtitle'>მათ შორის გამოჯანმრთელდა</p>
+					<div class="count"><?php echo Prevencia\get_stat( 'gamojanmrtelda' ); ?></div>
+				</div>
+
+				<div class="item">
 					<p class='subtitle'>კარანტინის რეჟიმში</p>
 					<div class="count"><?php echo Prevencia\get_stat( 'karantini' ); ?></div>
 				</div>
