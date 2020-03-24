@@ -40,6 +40,8 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme' );
 function enqueue_assets() {
 	$in_footer = true;
 
+	wp_dequeue_style( 'wp-block-library' );
+
 	wp_register_style(
 		'prevencia-bootstrap-css',
 		'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css',
