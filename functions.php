@@ -118,6 +118,34 @@ add_filter( 'facetwp_facet_html', function( $output, $params ) {
 }, 10, 2 );
 
 /**
+ * Get random services when no facet is selected.
+ *
+ * @param array $post_ids
+ * @param \FacetWP_Renderer $renderer
+ * @return array $post_ids
+ */
+add_filter( 'facetwp_pre_filtered_post_ids', function( $post_ids, $renderer ) {
+	// Bail, if facet is selected.
+	if ( ! empty( $renderer->facets ) ) {
+		return $post_ids;
+	}
+
+	// Bail if not 'service' template.
+	if ( $renderer->template['name'] !== 'services' ) {
+		return $post_ids;
+	}
+
+	$per_page = isset( $renderer->template['query_obj']['posts_per_page'] )
+		? (int) $renderer->template['query_obj']['posts_per_page']
+		: 20;
+
+	shuffle( $post_ids );
+	$post_ids = array_slice( $post_ids, 0, $per_page );
+
+	return $post_ids;
+}, 10, 2 );
+
+/**
  * Helper function for getting asset URLs.
  *
  * @param string $path Eg. '/img/angle.png'.
