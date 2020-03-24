@@ -25,7 +25,7 @@
 
 				<div class="item">
 					<p class='subtitle'>მათ შორის გამოჯანმრთელდა</p>
-					<div class="count"><?php echo Prevencia\get_stat( 'gamojanmrtelda' ); ?></div>
+					<div class="count"><?php echo Prevencia\get_stat( 'gamojanmrtelebuli' ); ?></div>
 				</div>
 
 				<div class="item">
