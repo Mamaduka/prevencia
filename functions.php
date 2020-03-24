@@ -126,7 +126,7 @@ add_filter( 'facetwp_facet_html', function( $output, $params ) {
  * @param \FacetWP_Renderer $renderer
  * @return array $post_ids
  */
-add_filter( 'facetwp_pre_filtered_post_ids', function( $post_ids, $renderer ) {
+add_filter( 'facetwp_filtered_post_ids', function( $post_ids, $renderer ) {
 	// Bail, if facet is selected.
 	if ( ! empty( $renderer->facets ) ) {
 		return $post_ids;
