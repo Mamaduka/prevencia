@@ -2,7 +2,7 @@
 
 namespace Prevencia;
 
-const VERSION = '200320';
+const VERSION = '040420';
 
 /**
  * Setup theme features.
