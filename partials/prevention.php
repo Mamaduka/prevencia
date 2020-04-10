@@ -7,19 +7,14 @@
 				მარტივად ერთ სივრცეში მიიღეთ ინფორმაცია საქართველოში არსებული ონლაინ/დისტანციური სერვისების თუ
 				პროდუქტების შესახებ.
 			</p>
-			<br />
-			<p>
-				პრევენციისთვის, გთხოვთ გაითვალისწინოთ ყველა რეკომენდაცია, გავურთხილდეთ ერთმანეთს, მეტი
-				ყურადღებით და პასუხისმგებლობით ერთად ყველაფერი დაძლევადია!
-			</p>
+		
 		</div>
 
 		<div>
 			<div class="statistics">
-				<p class="title">შემთხვევები</p>
-
-				<div class="item">
-					<p class='subtitle'>დადასტურებული შემთხვევა</p>
+				<div class="d-none">
+				<div class="item d-flex">
+					<p class='subtitle'>დაფიქსირებული შემთხვევა</p>
 					<div class="count"><?php echo Prevencia\get_stat( 'dadasturebuli' ); ?></div>
 				</div>
 
@@ -49,6 +44,8 @@
 					<div class="date"><?php echo get_the_modified_date( 'G:i / j F'); ?> <span class="stopcov"><a href='https://stopcov.ge/'
 								target="_blank">წყარო: stopcov.ge</a></div>
 				</div>
+				</div>
+				
 			</div>
 		</div>
 

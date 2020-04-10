@@ -11,7 +11,7 @@
 				<li><a href="<?php echo home_url('#offers'); ?>" class='offers-link'>დისტანციური სერვისები</a></li>
 				<li><a href="<?php echo home_url('#fake-news'); ?>" class='fakenews-link'>ყალბი ამბები</a></li>
 				<li><a href="<?php echo home_url('#FAQ'); ?>" class='recommendations-link'>რეკომენდაციები</a></li>
-				<li><a href="<?php echo home_url('#service-form'); ?>" class='about-link'>ჩვებ შესახებ</a></li>
+				<li><a href="<?php echo home_url('/about'); ?>" class='about-link'>ჩვენ შესახებ</a></li>
 			</ul>
 		</div>
 		</div>

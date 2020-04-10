@@ -60,6 +60,6 @@
 		<?php echo facetwp_display('template', 'services'); ?>
 
 	<?php endif; ?>
-	<a href="<?php echo get_post_type_archive_link('service'); ?>" class="light-btn">ყველას ნახვა</a>
+	<a href="<?php echo get_post_type_archive_link('service'); ?>" class="see-all">ყველას ნახვა</a>
 	</div>
 </div>

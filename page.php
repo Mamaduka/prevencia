@@ -8,8 +8,12 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 		<div class='container'>
+			<div class="hero-container">
+				<h2><?php the_title(); ?></h2>
+			</div>
+	
 			<div class="text-container">
-				<h2 class="text-center"><?php the_title(); ?></h2>
+				
 
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'image' ] ); ?>
