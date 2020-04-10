@@ -36,7 +36,7 @@ jQuery(function ($) {
 		}, 700);
 	});
 
-	$(".contact-link").click(function () {
+	$(".add-service-button").click(function () {
 		$('html, body').animate({
 			scrollTop: $("div.sercive-form").offset().top
 		}, 700);
@@ -86,5 +86,15 @@ jQuery(function ($) {
 			self.closest('div').find('.description span').slideDown();
 			$(self).hide();
 		});
-	}
+    }
+    
+
+    $('.category-slider').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow:4,
+        centerMode: true,
+        infinite: true,
+        centerPadding: 200
+    });
 });

@@ -24,6 +24,10 @@ body.open .b-container {
   z-index: 999;
 }
 
+.logo img{
+  margin-right: 30px;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -34,6 +38,11 @@ ul {
   .container {
     max-width: 1480px !important;
   }
+}
+
+input,
+.form-control{
+  outline: none !important;
 }
 
 .light-btn {
@@ -62,14 +71,23 @@ h3.header {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 30px 0;
   align-items: center;
-  margin-bottom: 80px;
+}
+
+.header a.add-service-button{
+  background: #FEE9B3;
+  border-radius: 36px;
+  padding: 18px 45px;
+  margin-right: 15px;
+  font-size: 14px;
+  color: black;
+  display: inline-block;
 }
 
 div.main-block {
   background: #F2F4F7;
-  padding: 15px;
+  padding: 80px 15px;
   background: url('../img/bg-image.png') no-repeat;
 }
 
@@ -93,11 +111,20 @@ div.main-block {
 }
 
 .menu li a {
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 18px;
-
-  color: black;
+  color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
+}
+
+.btn-yellow{
+  border-radius: 36px;
+  padding: 18px;
+  background: #FEE9B3;
+}
+  
+.menu li a:hover {
+  color: black;
 }
 
 .main-block-items {
@@ -170,13 +197,45 @@ div.main-block {
   background: #fff;
   border-radius: 10px;
   border: 1px solid #D6D6D6;
-  padding: 40px;
+  padding: 20px 40px;
   margin-bottom: 30px;
   transition: all 0.3s;
 }
 
+.offers .offer-item .category-name{
+  border: 1px solid #EAEAEC;
+  border-radius: 50px;
+  padding: 20px 25px;
+  display: block;
+  font-size: 14px;
+  max-width: 190px;
+  box-shadow: 0 3px 6px #F0F3F7;
+  margin-bottom: 20px;
+}
+
+.offers .offer-item .category-name [class^="dot-"]{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: gray;
+  margin-right: 10px;
+}
+
+.offers .offer-item .category-name .dot-online-shop{
+  background: #E84F4F;
+}
+
 .offers .offer-item a {
   display: block;
+  max-width: 122px;
+  text-align: center;
+  background: #F7F7F8;
+  color: black;
+  border-radius: 50px;
+  margin-top: 10px;
+  padding: 20px 30px;
+  font-size: 14px;
 }
 
 .offers .offer-item:hover,
@@ -195,13 +254,14 @@ div.main-block {
 }
 
 .offers .add-item {
-  background: #F8F9FB;
   border-radius: 10px;
   border: 1px solid #D6D6D6;
   padding: 40px;
   margin-bottom: 30px;
   transition: all 0.3s;
   cursor: pointer;
+  background-size: cover;
+  background: url('../img/addservice-bg.png') no-repeat;
 }
 
 .offers .add-item .add-circle {
@@ -219,13 +279,79 @@ div.main-block {
 
 .offer-item,
 .add-item {
-  height: 735px;
+  height: 600px;
+  overflow: hidden;
 }
 
 .offers .add-item p.description {
   font-family: helvetica-medium;
   font-size: 30px;
-  margin-top: 100px;
+  margin-top: 350px;
+}
+
+.offers .facetwp-dropdown{
+  height: 60px;
+  padding: 0 40px;
+  border-radius: 50px;
+  border: 1px solid #DCDFE5;
+  box-shadow: 0 3px 6px #F0F3F7;
+  outline: none !important;
+  margin-right: 20px;
+}
+
+.offers .search-input{
+  height: 60px;
+  padding: 0 40px;
+  border-radius: 50px;
+  background: #F7F7F8;
+  margin-bottom: 40px;
+  flex: 1;
+  border: 1px solid #E2E3E6;
+}
+
+.offers .search-submit{
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #FEE9B3;
+}
+
+.offers .offers-carousel{
+  background:#F7F7F8;
+  padding: 40px 0 70px 0;
+  margin-bottom: 35px;
+}
+
+.offers .offers-carousel .category-slider{
+  width: calc(100% - 25px);
+}
+
+.offers .offers-carousel .category-slider .slider-item{
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid #EBEBEB;
+  max-height: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.offers .offers-carousel .category-slider .slider-item:hover{
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08)
+}
+
+.slick-slide {
+  margin: 0 25px;
+}
+/* the parent */
+.slick-list {
+  margin: 0 -25px;
 }
 
 /********************* OFFER BLOCK ********************/
@@ -316,16 +442,16 @@ div.main-block {
 }
 
 #accordion .heading {
-  background: #F2F4F7;
+  background: #F7F7F8;
   color: black !important;
   cursor: pointer;
   outline: none;
   position: relative;
-  font-size: 22px;
+  font-size: 18px;
   font-family: helvetica-medium;
   border: none !important;
   padding: 30px 40px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 10px 0;
 }
 
@@ -347,7 +473,7 @@ div.main-block {
 
 #accordion .desc {
   padding: 0 40px 30px 40px;
-  background: #F2F4F7;
+  background: #F7F7F8;
   margin-top: -16px;
   font-family: helvetica-regular;
   border-bottom-left-radius: 10px !important;
@@ -379,19 +505,21 @@ div.main-block {
 
 .hf-form input,
 #serviceForm input {
-  padding: 40px 30px;
-  border-radius: 10px;
-  border: 1px solid #D5D5D5;
+  padding: 29px 30px;
+  background: #F7F7F8;
+  border: 1px solid #F7F7F8;
   outline: none;
+  border-radius: 100px;
   box-shadow: none !important;
   margin-bottom: 30px;
 }
 
 .hf-form div.fake-input,
 #serviceForm div.fake-input {
-  padding: 40px 30px;
-  border-radius: 10px;
-  border: 1px solid #D5D5D5;
+  padding: 29px 30px;
+  border-radius: 100px;
+  background: #F7F7F8;
+  border: 1px solid #F7F7F8;
   outline: none;
   box-shadow: none !important;
   margin-bottom: 30px;
@@ -406,13 +534,14 @@ div.main-block {
 
 .hf-form div.fake-input span,
 #serviceForm div.fake-input span {
-  background: #F2F4F7;
+  background: #fff;
   display: inline-block;
-  border-radius: 10px;
-  padding: 15px 20px;
+  border-radius: 100px;
+  padding: 12px 24px;
   position: absolute;
-  right: 20px;
-  top: 14px;
+  font-size: 14px;
+  right: 10px;
+  top: 7px;
 }
 
 .hf-form input[type='submit'],
@@ -428,16 +557,20 @@ div.main-block {
 #serviceForm select {
   outline: none;
   box-shadow: none !important;
-  border-radius: 10px;
-  padding: 0 25px;
-  height: 82px;
+  border-radius: 100px;
+  background: #F7F7F8;
+  border: 1px solid #F7F7F8;
+  padding: 0px 25px;
+  height: 60px;
   margin-bottom: 30px;
 }
 
 .hf-form textarea,
 #serviceForm textarea {
   resize: none;
-  border-radius: 10px;
+  border-radius: 30px;
+  background: #F7F7F8;
+  border: 1px solid #F7F7F8;
   padding: 30px;
   min-height: 400px;
   outline: none;
@@ -1020,7 +1153,7 @@ button.show-all {
 .uploaded {
   position: absolute;
   left: 20px;
-  top: 27px;
+  top: 16px;
 }
 
 .flex-show {

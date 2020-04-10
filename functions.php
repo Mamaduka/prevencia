@@ -50,6 +50,22 @@ function enqueue_assets() {
 	);
 
 	wp_enqueue_style(
+		'prevencia-slick-slider-css',
+		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+		[],
+		'1.8.1'
+	);
+
+	wp_enqueue_style(
+		'prevencia-slick-slider-theme-css',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+		[],
+		'1.9.0'
+	);
+
+	
+
+	wp_enqueue_style(
 		'prevencia-style',
 		get_template_directory_uri() . '/assets/css/main.min.css',
 		[ 'prevencia-bootstrap-css' ],
@@ -61,6 +77,14 @@ function enqueue_assets() {
 		'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js',
 		[ 'jquery' ],
 		'4.4.1',
+		$in_footer
+	);
+
+	wp_enqueue_script(
+		'prevencia-slick-slider-js',
+		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+		[ 'jquery' ],
+		'1.8.1',
 		$in_footer
 	);
 
@@ -114,7 +138,7 @@ add_filter( 'excerpt_more', __NAMESPACE__ . '\\excerpt_more' );
  */
 add_filter( 'facetwp_facet_html', function( $output, $params ) {
 	if ( 'dropdown' == $params['facet']['type'] ) {
-		$output = str_replace( 'facetwp-dropdown', 'facetwp-dropdown form-control', $output );
+		// $output = str_replace( 'facetwp-dropdown', 'facetwp-dropdown form-control', $output );
 	}
 	return $output;
 }, 10, 2 );

@@ -78,7 +78,7 @@
 		</div>
 
 		<div class="col-md-12">
-			<button class="btn btn-primary">გაგზავნა</button>
+			<button class="btn btn-yellow">გაგზავნა</button>
 		</div>
 	</div>
 </div>

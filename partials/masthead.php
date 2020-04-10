@@ -1,5 +1,6 @@
 <div class="container">
 	<div class='header'>
+		<div class='d-flex align-items-center'>
 		<div class='logo'>
 			<a href="<?php echo home_url(); ?>">
 				<img src="<?php echo Prevencia\the_asset('/img/logo.png'); ?>" alt='logo' />
@@ -7,12 +8,18 @@
 		</div>
 		<div>
 			<ul class="menu">
-				<li><a href="<?php echo home_url('#main-block'); ?>" class='main-link'>მთავარი</a></li>
 				<li><a href="<?php echo home_url('#offers'); ?>" class='offers-link'>დისტანციური სერვისები</a></li>
-				<li><a href="<?php echo home_url('#FAQ'); ?>" class='recommendations-link'>რეკომენდაციები</a></li>
 				<li><a href="<?php echo home_url('#fake-news'); ?>" class='fakenews-link'>ყალბი ამბები</a></li>
-				<li><a href="<?php echo home_url('#service-form'); ?>" class='contact-link'>დაამატე სერვისი</a></li>
+				<li><a href="<?php echo home_url('#FAQ'); ?>" class='recommendations-link'>რეკომენდაციები</a></li>
+				<li><a href="<?php echo home_url('#service-form'); ?>" class='about-link'>ჩვებ შესახებ</a></li>
 			</ul>
+		</div>
+		</div>
+	
+
+		<div>
+		<a class='add-service-button' href="<?php echo home_url('#service-form'); ?>" class='contact-link'>სერვისის დამატება</a>
+		<a href="https://www.facebook.com/groups/prevencia.ge" target="_blank"><img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" /></a>
 		</div>
 	</div>
 

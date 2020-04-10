@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <body>
+<?php get_template_part( 'partials/masthead' ); ?>
 	<div class="main-block">
-		<?php get_template_part( 'partials/masthead' ); ?>
 
 		<?php get_template_part( 'partials/prevention' ); ?>
 	</div>
