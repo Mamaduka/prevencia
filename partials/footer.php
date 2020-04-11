@@ -1,6 +1,5 @@
-<footer>
+<footer class="whiten">
 	<div class="container">
-		<hr />
 		<div class="footer-content">
 			<div class="logo">
 				<a href="<?php echo home_url(); ?>">

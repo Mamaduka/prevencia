@@ -1,3 +1,4 @@
+jQuery(function (e) { e("#accordion").accordion({ active: 999, collapsible: !0 }), e(".add-item").click(function () { e("html, body").animate({ scrollTop: e("div.sercive-form").offset().top }, 700) }), e(".main-link").click(function () { e("html, body").animate({ scrollTop: e("div.main-block").offset().top }, 700) }), e(".offers-link").click(function () { e("html, body").animate({ scrollTop: e("div.offers").offset().top }, 700) }), e(".fakenews-link").click(function () { e("html, body").animate({ scrollTop: e("div.fake-news").offset().top }, 700) }), e(".recommendations-link").click(function () { e("html, body").animate({ scrollTop: e("div.FAQ").offset().top }, 700) }), e(".add-service-button").click(function () { e("html, body").animate({ scrollTop: e("div.sercive-form").offset().top }, 700) }), e(".hf-form div.fake-input").click(function () { e("#logo").click() }), document.getElementById("logo") && document.getElementById("logo").addEventListener("change", function (o) { e(".uploaded").text("თქვენი ფაილი აიტვირთა") }), e("a.b-link").click(function () { e(".b-nav").removeClass("open"), e(".b-container").removeClass("open"), e("body").removeClass("open") }); var o = document.body, n = document.getElementsByClassName("b-menu")[0], t = document.getElementsByClassName("b-container")[0], i = document.getElementsByClassName("b-nav")[0]; n.addEventListener("click", function () { [o, t, i].forEach(function (e) { e.classList.contains("open") ? (e.classList.remove("open"), setTimeout(() => { }, 1e3)) : e.classList.add("open") }) }, !1), window.innerWidth < 768 && (e(".offers .offer-item .description").after("<button class='btn btn-link show-all' style='padding-left: 0;'>წაიკითხე სრულად...</button>"), e("button.show-all").click(function () { var o = e(this); o.closest("div").find(".description span").slideDown(), e(o).hide() })), e(".category-slider").slick({ arrows: !1, dots: !0, slidesToShow: 4, centerMode: !0, infinite: !0, centerPadding: 200 }) });
 jQuery(function ($) {
 	$("#accordion").accordion({
 		active: 999,
@@ -47,13 +48,13 @@ jQuery(function ($) {
 	});
 
 
-	if(document.getElementById('logo')){
-		document.getElementById('logo').addEventListener('change', function(ev){
+	if (document.getElementById('logo')) {
+		document.getElementById('logo').addEventListener('change', function (ev) {
 			$('.uploaded').text('თქვენი ფაილი აიტვირთა')
 		});
 	}
 
-	$('a.b-link').click(function(){
+	$('a.b-link').click(function () {
 		$('.b-nav').removeClass('open');
 		$('.b-container').removeClass('open');
 		$('body').removeClass('open');
@@ -78,7 +79,7 @@ jQuery(function ($) {
 		});
 	}, false);
 
-	if ( window.innerWidth < 768 ) {
+	if (window.innerWidth < 768) {
 		$(".offers .offer-item .description").after("<button class='btn btn-link show-all' style='padding-left: 0;'>წაიკითხე სრულად...</button>");
 
 		$('button.show-all').click(function () {
@@ -86,15 +87,44 @@ jQuery(function ($) {
 			self.closest('div').find('.description span').slideDown();
 			$(self).hide();
 		});
-    }
-    
+	}
 
-    $('.category-slider').slick({
-        arrows: false,
-        dots: true,
-        slidesToShow:4,
-        centerMode: true,
-        infinite: true,
-        centerPadding: 200
-    });
+
+	// $('.category-slider').slick({
+	// 	arrows: false,
+	// 	dots: true,
+	// 	slidesToShow: 4,
+	// 	centerMode: true,
+	// 	infinite: true,
+	// 	centerPadding: 200
+	// });
+
+
+	$('#toList').click(function () {
+		$('#archive-grid').addClass('list-view');
+		$(this).addClass('active');
+		$('#toGrid').removeClass('active');
+	});
+
+	$('#toGrid').click(function () {
+		$('#archive-grid').removeClass('list-view');
+		$(this).addClass('active');
+		$('#toList').removeClass('active');
+	});
+
+
+	$('#statistics-tabs li a:not(:first)').addClass('inactive');
+	$('.tab-item').hide();
+	$('.tab-item:first').show();
+
+	$('#statistics-tabs li a').click(function () {
+		var t = $(this).attr('id');
+		if ($(this).hasClass('inactive')) { //this is the start of our condition 
+			$('#statistics-tabs li a').addClass('inactive');
+			$(this).removeClass('inactive');
+
+			$('.tab-item').hide();
+			$('#' + t + 'C').fadeIn('fast');
+		}
+	});
 });

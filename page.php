@@ -2,9 +2,7 @@
 
 <body>
 <?php get_template_part( 'partials/masthead' ); ?>
-	<div class="main-block whiten">
-
-
+	<div class="page-container ">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 		<div class='container'>

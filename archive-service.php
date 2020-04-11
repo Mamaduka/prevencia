@@ -24,8 +24,12 @@
 								<span class="toolbar-sort">
 									სორტირება: <?php echo facetwp_display( 'sort' ); ?>
 								</span>
+								<div>
+									<a class='layout-link active' id='toGrid'><img src="<?php echo Prevencia\the_asset('/img/grid.png'); ?>" alt='grid' /></a>
+									<a class='layout-link' id='toList'><img src="<?php echo Prevencia\the_asset('/img/list.png'); ?>" alt='grid' /></a>
+								</div>
 							</div>
-							<div class='row'>
+							<div id='archive-grid'  class='row'>
 								<?php while ( have_posts() ) : the_post(); ?>
 									<?php get_template_part( 'partials/content', 'service' ); ?>
 							<?php endwhile; ?>

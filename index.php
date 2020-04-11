@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 
 <body>
-	<div class="main-block whiten">
+	<div class="page-container">
 		<?php get_template_part( 'partials/masthead' ); ?>
 
-		<div class='fake-news fake-news-main'>
+		<div class='fake-news fake-news-inner'>
 			<div class="container">
-				<h3 class='header'><?php echo Prevencia\get_archive_title(); ?></h3>
+			<div class="hero-container">
+					<h3 class='header'><?php echo Prevencia\get_archive_title(); ?></h3>
+					<div class="subtitle">დისტანციური სერვისები რომელიც დაგეხმარებათ სახლიდან გაუსვლელად მიიღოთ ყველანაირი სერვისი</div>
+				</div>
+				
 				<?php if ( have_posts() ) : ?>
 					<div class='row'>
 						<?php while ( have_posts() ) : the_post(); ?>
