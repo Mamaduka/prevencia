@@ -26,13 +26,37 @@ function get_service_category( $id = false ) {
 }
 
 /**
+ * Get service category dropdown.
+ *
+ * @return string
+ */
+function service_category_dropdown() {
+	$args = [
+		'show_option_none'  => 'აირჩიეთ კატეგორია',
+		'orderby'           => 'id',
+		'order'             => 'ASC',
+		'show_count'        => false,
+		'echo'              => false,
+		'hierarchical'      => false,
+		'name'              => 'fwp_service_category',
+		'class'             => 'facetwp-dropdown',
+		'taxonomy'          => 'service_category',
+		'hide_if_empty'     => false,
+		'value_field'       => 'slug',
+		'required'          => false,
+	];
+
+	return \wp_dropdown_categories( $args );
+}
+
+/**
  * Helper function for getting asset URLs.
  *
  * @param string $path Eg. '/img/angle.png'.
  * @return string
  */
 function the_asset( $path ) {
-	return get_template_directory_uri() . '/assets' . $path;
+	return \get_template_directory_uri() . '/assets' . $path;
 }
 
 /**
