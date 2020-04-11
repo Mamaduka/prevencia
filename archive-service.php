@@ -26,7 +26,6 @@
 							<?php endwhile; ?>
 							</div>
 
-							<?php echo Prevencia\get_the_pagination(); ?>
 						<?php endif; ?>
 					</div>
 				</div>

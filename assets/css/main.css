@@ -304,7 +304,7 @@ div.main-block {
   margin-top: 350px;
 }
 
-.offers .facetwp-dropdown{
+.offers .facetwp-dropdown {
   height: 60px;
   padding: 0 40px;
   border-radius: 50px;
@@ -314,7 +314,14 @@ div.main-block {
   margin-right: 20px;
 }
 
-.offers .search-input{
+.offers .facetwp-search-wrap {
+  position: initial;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.offers .search-input,
+.offers .facetwp-search {
   height: 60px;
   padding: 0 40px;
   border-radius: 50px;
@@ -324,7 +331,8 @@ div.main-block {
   border: 1px solid #E2E3E6;
 }
 
-.offers .search-submit{
+.offers .search-submit,
+.offers .facetwp-search-wrap .facetwp-btn {
   height: 60px;
   width: 60px;
   margin-left: 20px;
@@ -334,6 +342,20 @@ div.main-block {
   border: none;
   border-radius: 50%;
   background: #FEE9B3;
+}
+
+.offers .facetwp-search-wrap .facetwp-btn {
+  position: initial;
+  opacity: 1;
+}
+
+.offers .facetwp-search-wrap .facetwp-btn:before {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url('../img/search-icon.png') no-repeat;
+    background-size: 16px 16px;
 }
 
 .offers .offers-carousel{
