@@ -139,47 +139,6 @@ function excerpt_more( $more ) {
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\excerpt_more' );
 
 /**
- * Apply Bootstrap class to FaceWP dropdown.
- *
- * @param string $output
- * @param array $params
- */
-add_filter( 'facetwp_facet_html', function( $output, $params ) {
-	if ( 'dropdown' == $params['facet']['type'] ) {
-		// $output = str_replace( 'facetwp-dropdown', 'facetwp-dropdown form-control', $output );
-	}
-	return $output;
-}, 10, 2 );
-
-/**
- * Get random services when no facet is selected.
- *
- * @param array $post_ids
- * @param \FacetWP_Renderer $renderer
- * @return array $post_ids
- */
-add_filter( 'facetwp_filtered_post_ids', function( $post_ids, $renderer ) {
-	// Bail, if facet is selected.
-	if ( ! empty( $renderer->facets ) ) {
-		return $post_ids;
-	}
-
-	// Bail if not 'service' template.
-	if ( $renderer->template['name'] !== 'services' ) {
-		return $post_ids;
-	}
-
-	$per_page = isset( $renderer->template['query_obj']['posts_per_page'] )
-		? (int) $renderer->template['query_obj']['posts_per_page']
-		: 20;
-
-	shuffle( $post_ids );
-	$post_ids = array_slice( $post_ids, 0, $per_page );
-
-	return $post_ids;
-}, 10, 2 );
-
-/**
  * Helper function for getting asset URLs.
  *
  * @param string $path Eg. '/img/angle.png'.
