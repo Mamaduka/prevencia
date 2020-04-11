@@ -118,9 +118,12 @@ div.main-block {
   margin: 0;
 }
 
-
 .whiten {
   background: white !important;
+}
+
+.plain {
+  background: #f7f7f8 !important;
 }
 
 .menu li a {
@@ -356,6 +359,14 @@ div.main-block {
     height: 16px;
     background: url('../img/search-icon.png') no-repeat;
     background-size: 16px 16px;
+}
+
+.offers .toolbar {
+  margin-bottom: 1rem;
+}
+
+.offers .toolbar-sort {
+  display: inline-flex;
 }
 
 .offers .offers-carousel{

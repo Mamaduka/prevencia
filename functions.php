@@ -107,6 +107,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/queries.php';
 
 /**
+ * Load FacetWP modifications.
+ */
+require get_template_directory() . '/inc/facetwp.php';
+
+/**
  * Adds tracking code to the site.
  *
  * @return void

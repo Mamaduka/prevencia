@@ -3,7 +3,7 @@
 <body>
 	<?php get_template_part( 'partials/masthead' ); ?>
 
-	<div class="main-block">
+	<div class="main-block plain">
 		<div class='offers'>
 			<div class="container">
 				<div class="hero-container">
@@ -20,11 +20,18 @@
 					</div>
 					<div class="col-md-9">
 						<?php if ( have_posts() ) : ?>
+							<div class="toolbar">
+								<span class="toolbar-sort">
+									სორტირება: <?php echo facetwp_display( 'sort' ); ?>
+								</span>
+							</div>
 							<div class='row'>
 								<?php while ( have_posts() ) : the_post(); ?>
 									<?php get_template_part( 'partials/content', 'service' ); ?>
 							<?php endwhile; ?>
 							</div>
+
+							<?php echo facetwp_display( 'pager' ); ?>
 
 						<?php endif; ?>
 					</div>
