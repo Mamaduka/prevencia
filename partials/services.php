@@ -14,7 +14,7 @@
 		<h3 class="header">დისტანციური სერვისები</h3>
 			<form role="search" method="get" class="d-flex" action="<?php echo get_post_type_archive_link( 'service' ); ?>">
 				<?php echo Prevencia\service_category_dropdown(); ?>
-				<input type="search" class="search-input" placeholder="ჩაწერეთ სერვისი" name="s" />
+				<input type="search" class="search-input" placeholder="ჩაწერეთ სერვისი" name="fwp_service_search" />
 				<button type="submit" class="search-submit">
 					<img src='<?php echo Prevencia\the_asset('/img/search-icon.png'); ?>' />
 				</button>

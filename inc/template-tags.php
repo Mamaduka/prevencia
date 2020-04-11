@@ -38,7 +38,7 @@ function service_category_dropdown() {
 		'show_count'        => false,
 		'echo'              => false,
 		'hierarchical'      => false,
-		'name'              => 'fwp_service_category',
+		'name'              => 'fwp_service_categories',
 		'class'             => 'facetwp-dropdown',
 		'taxonomy'          => 'service_category',
 		'hide_if_empty'     => false,
