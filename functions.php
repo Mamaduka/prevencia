@@ -97,6 +97,11 @@ function enqueue_assets() {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
 
 /**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
  * Load custom queries and their filters.
  */
 require get_template_directory() . '/inc/queries.php';

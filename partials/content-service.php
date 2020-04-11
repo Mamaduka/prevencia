@@ -1,7 +1,8 @@
 <div class='col-md-4'>
 	<div class='offer-item'>
 		<div class='category-name'>
-			<span class='dot-online-shop'></span>ონლაინ მაღაზია
+			<span class='dot-online-shop'></span>
+			<?php echo Prevencia\get_service_category(); ?>
 		</div>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'img-fluid' ] ); ?>

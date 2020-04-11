@@ -5,7 +5,6 @@
 		'posts_per_page'         => 180,
 		'ignore_sticky_posts'    => true,
 		'no_found_rows'          => true,
-		'update_post_term_cache' => false,
 		'shuffle_and_pick'       => 5,
 	] );
 ?>
