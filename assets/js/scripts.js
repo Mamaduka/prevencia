@@ -86,8 +86,7 @@ jQuery(function ($) {
 			self.closest('div').find('.description span').slideDown();
 			$(self).hide();
 		});
-    }
-    
+	}
 
     $('.category-slider').slick({
         arrows: false,
