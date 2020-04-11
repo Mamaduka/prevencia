@@ -12,9 +12,7 @@ $categories = get_terms( [ 'taxonomy' => 'service_category' ] );
 	<div class='category-slider'>
 		<?php foreach ( $categories as $term ) : ?>
 			<div class="slider-item">
-				<div class="category-image">
-					<img src='<?php echo Prevencia\the_asset('/img/government-services.png'); ?>' />
-				</div>
+				<img class="category-image" src="<?php echo Prevencia\the_asset('/img/government-services.png'); ?>" />
 				<div class="category-name">
 					<a href="<?php echo get_facet_term_url( $term->slug ); ?>">
 						<?php echo esc_html( $term->name ); ?>
