@@ -9,7 +9,7 @@
 		'update_post_term_cache' => false,
 	] );
 ?>
- 
+
 <div class='fake-news'>
 	<div class="container">
 		<h3 class='header'>ყალბი ამბები</h3>

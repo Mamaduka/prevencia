@@ -1,4 +1,5 @@
-<div class='col-md-4'>
+<?php $col_class = is_archive() ? 'col-md-6' : 'col-md-4'; ?>
+<div class="<?php echo $col_class; ?>">
 	<div class='offer-item'>
 		<div class='category-name'>
 			<span class='dot-online-shop'></span>

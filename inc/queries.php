@@ -18,3 +18,17 @@ function maybe_shuffle_and_pick( $posts, \WP_Query $query ) {
 	return $posts;
 }
 add_filter( 'the_posts', __NAMESPACE__ . '\\maybe_shuffle_and_pick', 10, 2 );
+
+/**
+ * Set entry number for Service archive.
+ *
+ * @param \WP_Query $query
+ * @return void
+ */
+function services_per_page( $query ) {
+	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'service' ) ) {
+		$query->set( 'posts_per_page', 8 );
+		return;
+	}
+}
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\services_per_page' );
