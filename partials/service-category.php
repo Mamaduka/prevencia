@@ -1,7 +1,7 @@
 <?php
-	$categories = get_terms([
-		'taxonomy' => 'service_category',
-	]);
+use function Prevencia\get_facet_term_url;
+
+$categories = get_terms( [ 'taxonomy' => 'service_category' ] );
 ?>
 <div class="offers-carousel">
 	<div class="container">
@@ -10,12 +10,16 @@
 	<br/>
 	<br/>
 	<div class='category-slider'>
-		<?php foreach ( $categories as $category ) : ?>
+		<?php foreach ( $categories as $term ) : ?>
 			<div class="slider-item">
-				<div>
+				<div class="category-image">
 					<img src='<?php echo Prevencia\the_asset('/img/government-services.png'); ?>' />
 				</div>
-				<div><?php echo esc_html( $category->name ); ?></div>
+				<div class="category-name">
+					<a href="<?php echo get_facet_term_url( $term->slug ); ?>">
+						<?php echo esc_html( $term->name ); ?>
+					</a>
+				</div>
 			</div>
 		<?php endforeach; ?>
 	</div>
