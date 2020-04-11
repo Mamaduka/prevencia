@@ -1,4 +1,4 @@
-/*** 
+/***
 
 lightgray - #F7F7F8
 yellow - #FEE9B3
@@ -435,9 +435,20 @@ div.main-block {
 }
 
 .offers .offers-carousel {
-  background: #f7f7f8;
+  background:#F7F7F8;
   padding: 40px 0 70px 0;
   margin-bottom: 35px;
+}
+
+.offers .offers-carousel .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offers .offers-carousel .slick-dots {
+  position: initial;
+  width: auto;
 }
 
 .offers .offers-carousel .category-slider {
@@ -455,19 +466,35 @@ div.main-block {
   justify-content: space-around;
 }
 
-.offers .offers-carousel .category-slider .slider-item:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+.offers .offers-carousel .category-image {
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid #EAEAEA;
+  background: #F7F7F8;
 }
 
-.offers .see-all {
-  background: #f7f7f8;
-  border-radius: 30px;
-  font-size: 14px;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0 70px 0;
-  color: black;
-  display: block;
+.offers .offers-carousel .category-slider .slider-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08)
+}
+
+.offers .offers-carousel a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.offers .offers-carousel a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.offers .see-all{
+    background: #F7F7F8;
+    border-radius: 30px;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0 70px 0;
+    color: black;
+    display: block;
 }
 
 .slick-slide {
