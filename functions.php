@@ -63,8 +63,6 @@ function enqueue_assets() {
 		'1.9.0'
 	);
 
-	
-
 	wp_enqueue_style(
 		'prevencia-style',
 		get_template_directory_uri() . '/assets/css/main.min.css',
@@ -97,6 +95,11 @@ function enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
+
+/**
+ * Load custom queries and their filters.
+ */
+require get_template_directory() . '/inc/queries.php';
 
 /**
  * Adds tracking code to the site.
@@ -259,6 +262,10 @@ function get_the_pagination() {
 			'prev_text'          => _x( 'Previous', 'previous set of posts' ),
 			'next_text'          => _x( 'Next', 'next set of posts' )
 		] );
+	}
+
+	if ( ! isset( $pages ) ) {
+		return '';
 	}
 
 	$template = '
