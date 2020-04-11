@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <body>
-	<div class="main-block whiten">
-		<?php get_template_part( 'partials/masthead' ); ?>
+	<?php get_template_part( 'partials/masthead' ); ?>
 
+	<div class="main-block whiten">
 		<div class='offers'>
 			<div class="container">
 				<h3 class='header'><?php echo Prevencia\get_archive_title(); ?></h3>
@@ -18,12 +18,10 @@
 				<?php endif; ?>
 			</div>
 		</div>
+	</div>
 
 	<?php get_template_part( 'partials/footer' ); ?>
 
-	</div>
-
 	<?php do_action( 'wp_footer' ); ?>
 </body>
-
 </html>
