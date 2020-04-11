@@ -1,4 +1,4 @@
-/*** 
+/***
 
 lightgray - #F7F7F8
 yellow - #FEE9B3
@@ -54,10 +54,10 @@ input,
 
 .light-btn {
   border-radius: 30px !important;
- 
+
   padding: 18px !important;
   background: white;
- 
+
   display: block;
   margin: 35px auto 0 auto;
   text-align: center;
@@ -138,7 +138,7 @@ div.main-block {
   padding: 18px;
   background: #FEE9B3;
 }
-  
+
 .menu li a:hover {
   color: black;
 }
@@ -369,17 +369,28 @@ div.main-block {
   display: inline-flex;
 }
 
-.offers .offers-carousel{
+.offers .offers-carousel {
   background:#F7F7F8;
   padding: 40px 0 70px 0;
   margin-bottom: 35px;
 }
 
-.offers .offers-carousel .category-slider{
+.offers .offers-carousel .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offers .offers-carousel .slick-dots {
+  position: initial;
+  width: auto;
+}
+
+.offers .offers-carousel .category-slider {
   width: calc(100% - 25px);
 }
 
-.offers .offers-carousel .category-slider .slider-item{
+.offers .offers-carousel .category-slider .slider-item  {
   background: white;
   border-radius: 15px;
   padding: 30px;
@@ -390,8 +401,17 @@ div.main-block {
   justify-content: space-around;
 }
 
-.offers .offers-carousel .category-slider .slider-item:hover{
+.offers .offers-carousel .category-slider .slider-item:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08)
+}
+
+.offers .offers-carousel a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.offers .offers-carousel a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 .offers .see-all{

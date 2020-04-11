@@ -88,12 +88,12 @@ jQuery(function ($) {
 		});
 	}
 
-    $('.category-slider').slick({
-        arrows: false,
-        dots: true,
-        slidesToShow:4,
-        centerMode: true,
-        infinite: true,
-        centerPadding: 200
-    });
+	$('.category-slider').slick({
+		arrows: false,
+		dots: true,
+		appendDots: $( '.offers-carousel .container' ),
+		slidesToShow:4,
+		slidesToScroll: 4,
+		infinite: true
+	});
 });
