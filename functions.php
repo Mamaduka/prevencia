@@ -85,8 +85,8 @@ function enqueue_assets() {
 		$in_footer
 	);
 
-	wp_enqueue_script(
-		'prevencia-slick-slider-js',
+	wp_register_script(
+		'slick-js',
 		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
 		[ 'jquery' ],
 		'1.8.1',
@@ -104,7 +104,7 @@ function enqueue_assets() {
 	wp_enqueue_script(
 		'prevencia-script',
 		get_template_directory_uri() . '/assets/js/scripts.min.js',
-		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js' ],
+		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slick-js' ],
 		VERSION,
 		$in_footer
 	);

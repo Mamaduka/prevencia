@@ -467,10 +467,12 @@ div.main-block {
 }
 
 .offers .offers-carousel .category-image {
-  padding: 20px;
+  padding: 10px;
   border-radius: 50%;
-  border: 1px solid #EAEAEA;
-  background: #F7F7F8;
+  border: 1px solid #eaeaea;
+  background: #f7f7f8;
+  height: 60px;
+  width: 60px;
 }
 
 .offers .offers-carousel .category-slider .slider-item:hover {
