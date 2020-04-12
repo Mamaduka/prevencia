@@ -50,6 +50,23 @@ function service_category_dropdown() {
 }
 
 /**
+ * Get the service category image.
+ *
+ * @param \WP_Term $term
+ * @return string|bool
+ */
+function get_service_image( \WP_Term $term ) {
+	$image_id  = get_term_meta( $term->term_id, 'image', true );
+	$image_src = wp_get_attachment_image_src( $image_id, 'full' );
+
+	if ( $image_src ) {
+		return $image_src['0'];
+	}
+
+	return $image_src;
+}
+
+/**
  * Helper function for getting asset URLs.
  *
  * @param string $path Eg. '/img/angle.png'.
