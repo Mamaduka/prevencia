@@ -55,8 +55,8 @@
 						</div>
 
 					</div>
-					<div id="tab2C" class="tab-item">
-						<div id="chart">chart content here</div>
+					<div id="tab2C" class="tab-item" style="padding:46px 20px">
+						<canvas id="canvas"  width="500" height="400"></canvas>
 					</div>
 				
 			</div>
