@@ -1,4 +1,3 @@
-jQuery(function (e) { e("#accordion").accordion({ active: 999, collapsible: !0 }), e(".add-item").click(function () { e("html, body").animate({ scrollTop: e("div.sercive-form").offset().top }, 700) }), e(".main-link").click(function () { e("html, body").animate({ scrollTop: e("div.main-block").offset().top }, 700) }), e(".offers-link").click(function () { e("html, body").animate({ scrollTop: e("div.offers").offset().top }, 700) }), e(".fakenews-link").click(function () { e("html, body").animate({ scrollTop: e("div.fake-news").offset().top }, 700) }), e(".recommendations-link").click(function () { e("html, body").animate({ scrollTop: e("div.FAQ").offset().top }, 700) }), e(".add-service-button").click(function () { e("html, body").animate({ scrollTop: e("div.sercive-form").offset().top }, 700) }), e(".hf-form div.fake-input").click(function () { e("#logo").click() }), document.getElementById("logo") && document.getElementById("logo").addEventListener("change", function (o) { e(".uploaded").text("თქვენი ფაილი აიტვირთა") }), e("a.b-link").click(function () { e(".b-nav").removeClass("open"), e(".b-container").removeClass("open"), e("body").removeClass("open") }); var o = document.body, n = document.getElementsByClassName("b-menu")[0], t = document.getElementsByClassName("b-container")[0], i = document.getElementsByClassName("b-nav")[0]; n.addEventListener("click", function () { [o, t, i].forEach(function (e) { e.classList.contains("open") ? (e.classList.remove("open"), setTimeout(() => { }, 1e3)) : e.classList.add("open") }) }, !1), window.innerWidth < 768 && (e(".offers .offer-item .description").after("<button class='btn btn-link show-all' style='padding-left: 0;'>წაიკითხე სრულად...</button>"), e("button.show-all").click(function () { var o = e(this); o.closest("div").find(".description span").slideDown(), e(o).hide() })), e(".category-slider").slick({ arrows: !1, dots: !0, slidesToShow: 4, centerMode: !0, infinite: !0, centerPadding: 200 }) });
 jQuery(function ($) {
 	$("#accordion").accordion({
 		active: 999,
@@ -90,13 +89,13 @@ jQuery(function ($) {
 	}
 
 
-	$('.category-slider').slick({
+	jQuery('.category-slider').slick({
 		arrows: false,
 		dots: true,
-		appendDots: $( '.offers-carousel .container' ),
-		slidesToShow:4,
+		appendDots: jQuery( '.offers-carousel .container' ),
+		slidesToShow: 4,
 		slidesToScroll: 4,
-		infinite: true
+		infinite: true,
 	});
 
 

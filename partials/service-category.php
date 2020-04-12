@@ -10,7 +10,7 @@ $categories = get_terms( [ 'taxonomy' => 'service_category' ] );
 	</div>
 	<br/>
 	<br/>
-	<div class='category-slider'>
+	<div class="category-slider">
 		<?php foreach ( $categories as $term ) : ?>
 			<div class="slider-item">
 				<?php if ( $image = get_service_image( $term ) ) : ?>
