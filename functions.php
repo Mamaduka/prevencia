@@ -51,6 +51,11 @@ require get_template_directory() . '/inc/queries.php';
 require get_template_directory() . '/inc/facetwp.php';
 
 /**
- * Load FacetWP modifications.
+ * Load extras.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Load stat helpers.
+ */
+require get_template_directory() . '/inc/stats.php';

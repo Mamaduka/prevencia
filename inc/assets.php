@@ -61,7 +61,7 @@ function enqueue_assets() {
 	);
 
 	wp_register_script(
-		'slick-js',
+		'slickjs',
 		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
 		[ 'jquery' ],
 		'1.8.1',
@@ -69,9 +69,9 @@ function enqueue_assets() {
 	);
 
 	wp_enqueue_script(
-		'chartjs-js',
+		'chartjs',
 		'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js',
-		[ ],
+		[],
 		'2.9.3',
 		$in_footer
 	);
@@ -79,10 +79,13 @@ function enqueue_assets() {
 	wp_enqueue_script(
 		'prevencia-script',
 		get_template_directory_uri() . '/assets/js/scripts.min.js',
-		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slick-js' ],
+		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slickjs', 'chartjs' ],
 		VERSION,
 		$in_footer
 	);
+
+	$data = get_the_stats_data();
+	wp_localize_script( 'prevencia-script', 'covidData', $data );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
 

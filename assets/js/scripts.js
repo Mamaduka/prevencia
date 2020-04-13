@@ -129,25 +129,19 @@ jQuery(function ($) {
 
 
 
-    // chart 
-    function initChart(numbers, dates, recovered, deaths) {
-        
-        console.log(recovered);
-            // console.log(value.match('-(.*)-')[1]);
-      
-            
-        
+    // Chart.
+    function initChart( { date, confirmed, deaths, recovered } ) {
 
         var config = {
             type: 'line',
             data: {
-                labels: dates,
+                labels: date,
                 datasets: [{
                     label: 'დაფიქსირებული',
                     backgroundColor: '#F79403',
                     borderColor: '#CCCCCC',
                     pointBorderColor:'#F79403',
-                    data: numbers,
+                    data: confirmed,
                     fill: false
                 },
                 {
@@ -197,42 +191,11 @@ jQuery(function ($) {
             }
         };
 
-
         window.onload = function () {
             var ctx = document.getElementById('canvas').getContext('2d');
             window.myLine = new Chart(ctx, config);
         };
     }
 
-    var numbers = [];
-    var dates = [];
-    var recoveredNum = [];
-    var deathNum = [];
-
-    function slicedVal (value) {
-        return value.slice(34);
-    }
-
-    var months = ['იან', 'თებ', 'მარ', 'აპრ', 'მაი', 'ივნ', 'ივლ', 'აგვ', 'სექ', 'ოქტ', 'ნოე', 'დეკ']
-
-    function dateNormalized (value) {
-            const monthIndex = value.substr(5).charAt(0);
-
-            return value.split('-').pop() + ' ' + months[monthIndex - 1] ;
-    }
-
-
-    fetch("https://pomber.github.io/covid19/timeseries.json")
-        .then(response => response.json())
-        .then(data => {
-            data["Georgia"].forEach(({ date, confirmed, recovered, deaths }) => {
-                // console.log(`${date} active cases: ${confirmed - recovered - deaths}`);
-                deathNum.push(deaths);
-                dateNormalized(date);
-                dates.push(dateNormalized(date));
-                numbers.push(confirmed);
-                recoveredNum.push(recovered);
-            });
-        }).then(() => initChart(slicedVal(numbers), slicedVal(dates), slicedVal(recoveredNum), slicedVal(deathNum)));
-
+    initChart( window.covidData );
 });
