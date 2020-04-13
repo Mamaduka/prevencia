@@ -1,3 +1,10 @@
+<?php
+
+use function Prevencia\get_svg;
+use function Prevencia\get_stat;
+
+?>
+
 <div class='container'>
 	<div class="items-container">
 		<div class='content'>
@@ -12,7 +19,6 @@
 
 		<div>
 			<div class="statistics">
-				
 
 				<div class="title-item">
 							დაფიქსირებული შემთხვევა <span><?php echo Prevencia\get_stat('dadasturebuli'); ?> </span>
@@ -24,27 +30,27 @@
 					<div id="tab1C" class="tab-item">
 						<div class="row">
 							<div class="item col-md-6">
-								<img src='<?php echo Prevencia\the_asset('/img/recovered.png'); ?>' alt='recovered' />
+								<?php echo get_svg( [ 'icon' => 'gamojanmrtelebuli', 'width' => 43, 'height' => 43 ] ); ?>
 								<p class='subtitle'>გამოჯანმრთელებული</p>
-								<div class="count"><?php echo Prevencia\get_stat('gamojanmrtelebuli'); ?></div>
+								<div class="count"><?php echo get_stat('gamojanmrtelebuli'); ?></div>
 							</div>
 
 							<div class="item col-md-6">
-								<img src='<?php echo Prevencia\the_asset('/img/dead.png'); ?>' alt='dead' />
+								<?php echo get_svg( [ 'icon' => 'gardacvlili', 'width' => 43, 'height' => 43 ] ); ?>
 								<p class='subtitle'>გარდაცვლილი</p>
-								<div class="count"><?php echo Prevencia\get_stat('gardaicvlili'); ?></div>
+								<div class="count"><?php echo get_stat('gardaicvlili'); ?></div>
 							</div>
 
 							<div class="item col-md-6">
-								<img src='<?php echo Prevencia\the_asset('/img/stationary.png'); ?>' alt='stationary' />
+								<?php echo get_svg( [ 'icon' => 'stacionarshi', 'width' => 43, 'height' => 43 ] ); ?>
 								<p class='subtitle'>სტაციონარში მყოფი</p>
-								<div class="count"><?php echo Prevencia\get_stat('statsionari'); ?></div>
+								<div class="count"><?php echo get_stat('statsionari'); ?></div>
 							</div>
 
 							<div class="item col-md-6">
-								<img src='<?php echo Prevencia\the_asset('/img/quarantined.png'); ?>' alt='quarantined' />
+								<?php echo get_svg( [ 'icon' => 'karantini', 'width' => 43, 'height' => 43 ] ); ?>
 								<p class='subtitle'>კარანტინის რეჟიმში</p>
-								<div class="count"><?php echo Prevencia\get_stat('karantini'); ?></div>
+								<div class="count"><?php echo get_stat('karantini'); ?></div>
 							</div>
 							<hr />
 
