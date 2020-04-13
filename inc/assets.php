@@ -78,7 +78,7 @@ function enqueue_assets() {
 
 	wp_register_script(
 		'prevencia-stats',
-		get_template_directory_uri() . '/assets/js/stats.js',
+		get_template_directory_uri() . '/assets/js/stats.min.js',
 		[ 'chartjs' ],
 		'2.9.3',
 		$in_footer

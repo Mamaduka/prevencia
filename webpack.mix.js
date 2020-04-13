@@ -3,8 +3,8 @@ const mix = require('laravel-mix');
 mix.disableNotifications();
 
 mix.styles( [ 'assets/css/main.css' ], 'assets/css/main.min.css' );
-mix.scripts( [ 'assets/js/scripts.js' ], 'assets/js/scripts.min.js' );
-mix.scripts( [ 'assets/js/stats.js' ], 'assets/js/stats.min.js' );
+mix.babel( [ 'assets/js/scripts.js' ], 'assets/js/scripts.min.js' );
+mix.babel( [ 'assets/js/stats.js' ], 'assets/js/stats.min.js' );
 
 /*
  * Add custom Webpack configuration.
