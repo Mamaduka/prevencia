@@ -8,9 +8,7 @@
 		<p class='date'><?php echo get_post_time( 'F j, Y' ); ?></p>
 		<p class="excerpt"><?php the_title(); ?></p>
 		<div class='seemore'>
-			<a href="<?php the_permalink(); ?>">
-				 <span>ნახე მეტი</span>
-			</a>
+			<a href="<?php the_permalink(); ?>">სრულად</a>
 		</div>
 	</div>
 </div>
