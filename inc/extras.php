@@ -19,7 +19,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\\inject_tracking_codes' );
  * @return int
  */
 function excerpt_length( $length ) {
-	return 5;
+	return 10;
 }
 add_filter( 'excerpt_length', __NAMESPACE__ . '\\excerpt_length' );
 

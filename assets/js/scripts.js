@@ -126,4 +126,34 @@ jQuery(function ($) {
             $('#' + t + 'C').fadeIn('fast');
         }
     });
+
+    $('#archive-grid').on('click', '.expand', function( event ) {
+        event.preventDefault();
+        const parent = $(this).parents('.archive-item');
+        const siblings = parent.siblings();
+
+        parent
+            .removeClass('col-md-6')
+            .addClass('col')
+            .addClass('expanded');
+
+        siblings.hide();
+    } );
+
+    $('#archive-grid').on('click', '.go-back button', function( event ) {
+        event.preventDefault();
+        const parent = $(this).parents('.archive-item');
+        const siblings = parent.siblings();
+
+        if ( ! parent.hasClass('expanded') ) {
+            return;
+        }
+
+        parent
+            .removeClass('col')
+            .removeClass('expanded')
+            .addClass('col-md-6');
+
+        siblings.show();
+    } );
 });

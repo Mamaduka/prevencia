@@ -258,6 +258,10 @@ div.main-block {
 }
 
 /********************* OFFER BLOCK ********************/
+.offers .archive-item {
+  transition: width 3s ease-in-out;
+}
+
 .offers .offer-item {
   background: #fff;
   border-radius: 15px;
@@ -296,14 +300,15 @@ div.main-block {
   text-align: center;
 }
 
-.offers .offer-item a {
-  display: block;
-  max-width: 122px;
+.offers .offer-item .source,
+.offers .offer-item .expand {
+  display: inline-flex;
   text-align: center;
   background: #f7f7f8;
   color: black;
+  border: none;
   border-radius: 50px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 20px 30px;
   font-size: 14px;
 }
@@ -351,6 +356,37 @@ div.main-block {
 .add-item {
   height: 600px;
   overflow: hidden;
+}
+
+.archive-item:not(.expanded) .go-back,
+.archive-item:not(.expanded) .full,
+.archive-item:not(.expanded) .source {
+  display: none;
+}
+.expanded .offer-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.expanded .go-back {
+  padding: 20px 25px;
+}
+.expanded .go-back button {
+  -webkit-appearance: none;
+  appearance: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  border: none;
+}
+
+.expanded .offer-item .img-circle {
+  width: 100%;
+  text-align: left;
+}
+
+.expanded .offer-item .expand {
+  display: none;
 }
 
 .offers .add-item p.description {
@@ -488,7 +524,7 @@ div.main-block {
   text-decoration: none;
 }
 
-.offers .see-all{
+.offers .see-all {
     background: #F7F7F8;
     border-radius: 30px;
     font-size: 14px;
@@ -512,37 +548,28 @@ div.main-block {
   flex: 100%;
 }
 
-.list-view .hide-on-list {
+.list-view .hide-on-list,
+.list-view .archive-item:not(.expanded) .excerpt {
   display: none;
 }
 
-.list-view .wp-post-image {
+.list-view .archive-item:not(.expanded) .wp-post-image {
   max-width: 50px;
 }
 
-.list-view .archive-item .offer-item .more-text p span a {
-  margin: 0;
-}
-
-.list-view .archive-item .offer-item {
+.list-view .archive-item:not(.expanded) .offer-item {
   display: flex;
   height: auto;
   justify-content: space-between;
 }
 
-.list-view .right-container {
+.list-view .archive-item:not(.expanded) .offer-header {
   display: flex;
   align-items: center;
-  flex: 0 70%;
-  justify-content: space-between;
+  width: 80%;
 }
 
-.list-view .right-container .image-title-container {
-  display: flex;
-  align-items: center;
-}
-
-.list-view .right-container .image-title-container .img-circle {
+.list-view .archive-item:not(.expanded) .img-circle {
   margin-right: 20px;
   border: 1px solid #eaeaec;
   border-radius: 50%;
@@ -551,21 +578,22 @@ div.main-block {
   align-items: center;
   justify-content: center;
   height: 60px;
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); */
 }
 
-.list-view .right-container .category-name {
+.list-view .archive-item:not(.expanded) .category-name {
   margin: 0;
   order: 3;
   box-shadow: none;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
-.list-view .right-container .company-title {
+.list-view .archive-item:not(.expanded) .company-title {
   font-size: 20px;
+  margin: 0;
 }
 
-.offers .offer-item a,
-.list-view .right-container .company-title {
+.list-view .offer-item .expand {
   margin: 0;
 }
 
