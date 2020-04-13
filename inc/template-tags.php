@@ -67,6 +67,25 @@ function get_service_image( \WP_Term $term ) {
 }
 
 /**
+ * Get the "Service" search.
+ *
+ * @return void
+ */
+function get_service_source() {
+	$post = get_post( null );
+	$source = get_post_meta( $post->ID, 'source', true );
+
+	if ( empty( $source ) ) {
+		return '';
+	}
+
+	return sprintf(
+		'<span class="source"><a href="%1$s" target="_blank" rel="noopener noreferrer">წყარო</a></span>',
+		esc_url( $source )
+	);
+}
+
+/**
  * Helper function for getting asset URLs.
  *
  * @param string $path Eg. '/img/angle.png'.

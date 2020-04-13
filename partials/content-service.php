@@ -25,9 +25,6 @@ $hide_on_list =  is_archive() ? 'hide-on-list' : '';
 			<strong class="<?php echo $hide_on_list; ?>"><?php echo get_the_excerpt(); ?></strong>
 			<span class="more-text"><?php the_content(); ?></span>
 		</span>
-		<div>
-			<a href='#'>წყარო</a>
-		</div>
-
+		<?php echo Prevencia\get_service_source(); ?>
 	</div>
 </div>
