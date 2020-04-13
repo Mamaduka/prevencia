@@ -68,7 +68,7 @@ function enqueue_assets() {
 		$in_footer
 	);
 
-	wp_enqueue_script(
+	wp_register_script(
 		'chartjs',
 		'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js',
 		[],
@@ -76,16 +76,27 @@ function enqueue_assets() {
 		$in_footer
 	);
 
+	wp_register_script(
+		'prevencia-stats',
+		get_template_directory_uri() . '/assets/js/stats.js',
+		[ 'chartjs' ],
+		'2.9.3',
+		$in_footer
+	);
+
 	wp_enqueue_script(
 		'prevencia-script',
 		get_template_directory_uri() . '/assets/js/scripts.min.js',
-		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slickjs', 'chartjs' ],
+		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slickjs', ],
 		VERSION,
 		$in_footer
 	);
 
-	$data = get_the_stats_data();
-	wp_localize_script( 'prevencia-script', 'covidData', $data );
+	// Only load statistics chart on front-page.
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'prevencia-stats' );
+		wp_localize_script( 'prevencia-stats', 'covidData', get_the_stats_data() );
+	}
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
 
