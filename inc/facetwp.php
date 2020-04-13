@@ -11,7 +11,7 @@ namespace Prevencia;
 add_filter( 'facetwp_sort_options', function( $options ) {
 	$options = [
 		'default' => [
-			'label' => 'სხვა',
+			'label' => '',
 			'query_args' => []
 		],
 		'title_asc' => [

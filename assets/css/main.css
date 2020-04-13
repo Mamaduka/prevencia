@@ -470,6 +470,10 @@ div.main-block {
   display: inline-flex;
 }
 
+.offers .facetwp-sort {
+  margin-left: 5px;
+}
+
 .offers .offers-carousel {
   background:#F7F7F8;
   padding: 40px 0 70px 0;
