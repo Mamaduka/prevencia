@@ -50,7 +50,7 @@
 			<input class="form-control" title="შეავსეთ ველი" id="SERVICENAME" name="servicename" placeholder="სერვისის დასახელება" required />
 		</div>
 		<div class="col-md-12">
-			<textarea maxlength="600" class="form-control" placeholder="აღწერე სერვისი (მაქსიმუმ 600 სიმბოლო)" title='შეავსეთ ველი' name="SERVICEDESC" id="servicedesc" required></textarea>
+			<textarea maxlength="600" class="form-control" placeholder="აღწერეთ სერვისი (მაქსიმუმ 600 სიმბოლო)" title='შეავსეთ ველი' name="SERVICEDESC" id="servicedesc" required></textarea>
 		</div>
 		<div class="col-md-6">
 			<input type='file' class="form-control" title="ატვირთე ლოგო" id="logo" name="LOGO" placeholder="ატვირთეთ ლოგო" />

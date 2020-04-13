@@ -10,7 +10,7 @@
 			<div class="blog-inner-container">
 				<div class="top">
 					<?php if ( get_post_type() === 'fake-news' ) : ?>
-						<span class="fakenews">ყალბი სიახლე</span>
+						<span class="fakenews">ყალბი ამბები</span>
 					<?php endif; ?>
 					<span class="date"><?php echo wp_date( 'F j, Y' ); ?></span>
 				</div>

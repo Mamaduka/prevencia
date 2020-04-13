@@ -19,7 +19,7 @@ get_header(); ?>
 
 				<div class="row">
 					<div class="col-md-3">
-						<p>სერვისების ჩამონათვალი</p>
+						<p>სერვისების კატეგორიები</p>
 						<?php echo facetwp_display( 'facet', 'service_categories' ); ?>
 					</div>
 					<div class="col-md-9">
