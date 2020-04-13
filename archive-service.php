@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+
+use function Prevencia\get_svg;
+
+get_header(); ?>
 
 <body>
 	<?php get_template_part( 'partials/masthead' ); ?>
@@ -25,8 +29,12 @@
 									სორტირება: <?php echo facetwp_display( 'sort' ); ?>
 								</span>
 								<div>
-									<a class='layout-link active' id='toGrid'><img src="<?php echo Prevencia\the_asset('/img/grid.png'); ?>" alt='grid' /></a>
-									<a class='layout-link' id='toList'><img src="<?php echo Prevencia\the_asset('/img/list.png'); ?>" alt='grid' /></a>
+									<a class='layout-link active' id='toGrid'>
+										<?php echo get_svg( [ 'icon' => 'grid', 'width' => 26, 'height' => 16 ] ); ?>
+									</a>
+									<a class='layout-link' id='toList'>
+										<?php echo get_svg( [ 'icon' => 'list', 'width' => 26, 'height' => 16 ] ); ?>
+									</a>
 								</div>
 							</div>
 							<div id='archive-grid'  class='row'>

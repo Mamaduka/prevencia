@@ -1,0 +1,68 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.179" id="arrow">
+    <path d="M1.179 0L5 3.821 8.821 0 10 1.179l-5 5-5-5z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search">
+    <path d="M15.56 15.56a1.5 1.5 0 0 1-2.125 0l-2.652-2.652a7.046 7.046 0 1 1 2.125-2.125l2.652 2.652a1.5 1.5 0 0 1 0 2.125zM7.012 2a5.009 5.009 0 1 0 5.009 5.009A5.008 5.008 0 0 0 7.012 2z" fill="#292b2f"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.952 19.904" id="facebook">
+    <path d="M6.635 6.635V4.66c0-.892.2-1.343 1.581-1.343h1.736V0h-2.9C3.501 0 2.33 1.628 2.33 4.421v2.213H0v3.317h2.333V19.9h4.3V9.952h2.923l.394-3.317z" fill="#6f6f7c"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 16" id="grid">
+    <g transform="translate(-1613 -561)">
+      <rect width="6" height="6" rx="3" transform="translate(1613 561)"></rect>
+      <rect width="6" height="6" rx="3" transform="translate(1623 561)"></rect>
+      <rect width="6" height="6" rx="3" transform="translate(1623 571)"></rect>
+      <rect width="6" height="6" rx="3" transform="translate(1613 571)"></rect>
+      <rect width="6" height="6" rx="3" transform="translate(1633 561)"></rect>
+      <rect width="6" height="6" rx="3" transform="translate(1633 571)"></rect>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 16" id="list">
+    <g transform="translate(-1658 -561)">
+      <rect width="6" height="6" rx="3" transform="translate(1658 561)"></rect>
+      <rect width="17" height="6" rx="3" transform="translate(1668 561)"></rect>
+      <rect width="17" height="6" rx="3" transform="translate(1668 571)"></rect>
+      <rect width="6" height="6" rx="3" transform="translate(1658 571)"></rect>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43" id="gamojanmrtelebuli">
+    <g transform="translate(-1230 -402.43)">
+      <rect width="43" height="43" rx="21.5" transform="translate(1230 402.43)" fill="#d0fad3"></rect>
+      <g transform="translate(1240 413.236)" fill="none" stroke="#56a05c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M12.431 12H16v-2h-3.569"></path>
+        <path d="M12.431 10H6v2h6.431M10 12.429V16h2v-3.571m0-2.858V6h-2v3.571"></path>
+        <circle cx="11" cy="11" r="11" transform="translate(0 .194)"></circle>
+      </g>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43" id="gardacvlili">
+    <g transform="translate(-1465 -402.43)">
+      <rect width="43" height="43" rx="21.5" transform="translate(1465 402.43)" fill="#f7dbc3"></rect>
+      <g transform="translate(1476 413.478)" fill="none" stroke="#f07b17" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M14 2.952H8m3 3v-6"></path>
+        <circle cx="1.5" cy="1.5" r="1.5" transform="translate(4 18.952)"></circle>
+        <circle cx="1.5" cy="1.5" r="1.5" transform="translate(15 18.952)"></circle>
+        <path d="M0 10h18l4-2M7 18.952l9-9m-10 0l9 9"></path>
+      </g>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43" id="karantini">
+    <g transform="translate(-1466 -603.43)">
+      <rect width="43" height="43" rx="21.5" transform="translate(1466 603.43)" fill="#fee9b3"></rect>
+      <g fill="none" stroke="#e2a30e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M1478.385 621.679l-.171-1.23a3.533 3.533 0 0 1 3.976-3.987l1.233.168.75-.992a3.533 3.533 0 0 1 5.631-.007l.752.99 1.231-.171a3.534 3.534 0 0 1 3.987 3.977l-.168 1.232.992.75a3.533 3.533 0 0 1 .006 5.631l-.989.753.171 1.23a3.533 3.533 0 0 1-3.977 3.987l-1.232-.168-.75.992a3.534 3.534 0 0 1-5.631.008l-.753-.991-1.231.171a3.533 3.533 0 0 1-3.986-3.977l.168-1.232-.993-.75a3.534 3.534 0 0 1-.006-5.631z"></path>
+        <path d="M1483 625.236l3 3 5-6"></path>
+      </g>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43" id="stacionarshi">
+    <g transform="translate(-1231 -603.43)">
+      <rect width="43" height="43" rx="21.5" transform="translate(1231 603.43)" fill="#f8caca"></rect>
+      <g fill="none" stroke="#e84f4f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M1248 630.478v-7a4.888 4.888 0 0 1 5-5 4.888 4.888 0 0 1 5 5v7"></path>
+        <path d="M1245 630.43h16v4h-16zm8-18v2m11 9h-2m-3-10l-1 2m5 2l-2 1m-19 5h2m3-10l1 2m-5 2l2 1"></path>
+      </g>
+    </g>
+  </symbol>
+</svg>

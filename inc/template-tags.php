@@ -72,8 +72,8 @@ function get_service_image( \WP_Term $term ) {
  * @param string $path Eg. '/img/angle.png'.
  * @return string
  */
-function the_asset( $path ) {
-	return \get_template_directory_uri() . '/assets' . $path;
+function the_asset( $file ) {
+	return \get_parent_theme_file_uri( "/assets/$file" );
 }
 
 /**
@@ -176,4 +176,54 @@ function get_the_pagination() {
 	}
 
 	return sprintf( $template, $pagination, 'Navigation' );
+}
+
+/**
+ * Return SVG markup.
+ *
+ * @param array $args The parameters needed to display the SVG.
+ * @return string
+ */
+function get_svg( $args = [] ) {
+
+	// Set defaults.
+	$defaults = [
+		'icon'   => '',
+		'fill'   => '',
+		'height' => '',
+		'width'  => '',
+	];
+
+	// Parse args.
+	$args = wp_parse_args( $args, $defaults );
+
+	// Set SVG parameters.
+	$fill   = ( $args['fill'] ) ? ' fill="' . $args['fill'] . '"' : '';
+	$height = ( $args['height'] ) ? ' height="' . $args['height'] . '"' : '';
+	$width  = ( $args['width'] ) ? ' width="' . $args['width'] . '"' : '';
+
+	// Start a buffer...
+	ob_start();
+	?>
+
+	<svg
+	<?php
+		echo $height;
+		echo $width;
+		echo $fill;
+	?>
+		class="icon icon-<?php echo esc_attr( $args['icon'] ); ?>"
+		role="img">
+
+		<?php if ( is_customize_preview() ) : ?>
+			<use xlink:href="<?php echo esc_url( get_parent_theme_file_uri( '/assets/img/svg-icons.svg#icon-' . esc_html( $args['icon'] ) ) ); ?>"></use>
+		<?php else : ?>
+			<use xlink:href="#<?php echo esc_html( $args['icon'] ); ?>"></use>
+		<?php endif; ?>
+
+	</svg>
+
+	<?php
+	// Get the buffer and return.
+	return ob_get_clean();
 }
