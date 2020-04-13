@@ -9,40 +9,26 @@ namespace Prevencia;
  * @return array $options
  */
 add_filter( 'facetwp_sort_options', function( $options ) {
-	$options = array(
-		'default' => array(
-			'label' => __( 'Sort by', 'fwp' ),
-			'query_args' => array()
-		),
-		'title_asc' => array(
-			'label' => __( 'Title (A-Z)', 'fwp' ),
-			'query_args' => array(
+	$options = [
+		'default' => [
+			'label' => 'სხვა',
+			'query_args' => []
+		],
+		'title_asc' => [
+			'label' => 'ანბანი (ა-ჰ)',
+			'query_args' => [
 				'orderby' => 'title',
 				'order' => 'ASC',
-			)
-		),
-		'title_desc' => array(
-			'label' => __( 'Title (Z-A)', 'fwp' ),
-			'query_args' => array(
+			]
+		],
+		'title_desc' => [
+			'label' => 'ანბანი (ჰ-ა)',
+			'query_args' => [
 				'orderby' => 'title',
 				'order' => 'DESC',
-			)
-		),
-		'date_desc' => array(
-			'label' => __( 'Date (Newest)', 'fwp' ),
-			'query_args' => array(
-				'orderby' => 'date',
-				'order' => 'DESC',
-			)
-		),
-		'date_asc' => array(
-			'label' => __( 'Date (Oldest)', 'fwp' ),
-			'query_args' => array(
-				'orderby' => 'date',
-				'order' => 'ASC',
-			)
-		)
-	);
+			]
+		],
+	];
 
 	return $options;
 } );
