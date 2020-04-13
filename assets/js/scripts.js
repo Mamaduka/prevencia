@@ -138,6 +138,8 @@ jQuery(function ($) {
             .addClass('expanded');
 
         siblings.hide();
+        $('.toolbar').hide();
+        $('.facetwp-pager').hide();
     } );
 
     $('#archive-grid').on('click', '.go-back button', function( event ) {
@@ -155,5 +157,7 @@ jQuery(function ($) {
             .addClass('col-md-6');
 
         siblings.show();
+        $('.toolbar').show();
+        $('.facetwp-pager').show();
     } );
 });
