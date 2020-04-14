@@ -13,9 +13,6 @@
 <div class='fake-news'>
 	<div class="container">
 		<h3 class='header'>ყალბი ამბები</h3>
-		<div class="subtitle">
-		დისტანციური სერვისები რომელიც დაგეხმარებათ სახლიდან გაუსვლელად მიიღოთ ყველანაირი მომსახურება
-		</div>
 		<?php if ( $fake_news->have_posts() ) : ?>
 			<div class='row'>
 				<?php while ( $fake_news->have_posts() ) : $fake_news->the_post(); ?>
