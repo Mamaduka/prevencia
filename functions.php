@@ -31,6 +31,11 @@ function setup_theme() {
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup_theme' );
 
 /**
+ * Load FacetWP modifications.
+ */
+require get_template_directory() . '/inc/facetwp.php';
+
+/**
  * Theme assets.
  */
 require get_template_directory() . '/inc/assets.php';
@@ -44,11 +49,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Load custom queries and their filters.
  */
 require get_template_directory() . '/inc/queries.php';
-
-/**
- * Load FacetWP modifications.
- */
-require get_template_directory() . '/inc/facetwp.php';
 
 /**
  * Load extras.

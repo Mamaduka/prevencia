@@ -22,7 +22,11 @@ function get_service_category( $id = false ) {
 		return '';
 	}
 
-	return esc_html( $category->name );
+	return sprintf(
+		'<a href="%1$s">%2$s</a>',
+		get_facet_term_url( $category->slug ),
+		esc_html( $category->name )
+	);
 }
 
 /**
