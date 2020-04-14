@@ -82,6 +82,14 @@ h3.header {
   margin-bottom: 40px;
 }
 
+.sticky-header{
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 99999;
+  border-bottom: 1px solid #eaeaec;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -537,6 +545,11 @@ div.main-block {
     margin: 20px 0 70px 0;
     color: black;
     display: block;
+    text-decoration: none;
+}
+
+.offers .see-all:hover{
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .slick-slide {
@@ -741,6 +754,11 @@ div.main-block {
 
 /************** SERVICE FORM **************/
 
+
+input::placeholder {
+  overflow: visible !important;
+}
+
 .hf-form,
 #serviceForm {
   margin-bottom: 80px;
@@ -819,6 +837,7 @@ div.main-block {
   border-radius: 100px;
   background: #f7f7f8;
   border: 1px solid #f7f7f8;
+  font-size: 16.6px;
   padding: 0px 25px;
   height: 60px;
   margin-bottom: 30px;
@@ -994,6 +1013,10 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  .fake-news{
+    width: 100%;
+  }
+
   .items-container {
     flex-direction: column;
   }

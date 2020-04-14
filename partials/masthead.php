@@ -1,3 +1,4 @@
+<header id='sticky'>
 <div class="container">
 	<div class='header'>
 		<div class='d-flex align-items-center'>
@@ -8,10 +9,10 @@
 		</div>
 		<div>
 			<ul class="menu">
-				<li><a href="<?php echo home_url('#offers'); ?>" class='offers-link'>დისტანციური სერვისები</a></li>
-				<li><a href="<?php echo home_url('#fake-news'); ?>" class='fakenews-link'>ყალბი ამბები</a></li>
+				<li><a href="<?php echo home_url('/services'); ?>">დისტანციური სერვისები</a></li>
+				<li><a href="<?php echo home_url('/fake'); ?>" >ყალბი ამბები</a></li>
 				<li><a href="<?php echo home_url('#FAQ'); ?>" class='recommendations-link'>რეკომენდაციები</a></li>
-				<li><a href="<?php echo home_url('/about'); ?>" class='about-link'>ჩვენ შესახებ</a></li>
+				<li><a href="<?php echo home_url('/about'); ?>" >ჩვენ შესახებ</a></li>
 			</ul>
 		</div>
 		</div>
@@ -26,12 +27,12 @@
 	<div>
 		<!-- Navigation -->
 		<div class="b-nav">
-			<li><a class="b-link main-link" href="#">მთავარი</a></li>
-			<li><a class="b-link offers-link" href="#">დისტანციური სერვისები</a>
+			<li><a class="b-link" href="<?php echo home_url('/services'); ?>">დისტანციური სერვისები</a>
 			</li>
 			<li><a class="b-link recommendations-link" href="#">რეკომენდაციები</a></li>
-			<li><a class="b-link fakenews-link" href="#">ყალბი ამბები</a></li>
-			<li><a class="b-link contact-link" href="#">დაამატე სერვისი</a></li>
+			<li><a class="b-link" href="<?php echo home_url('/fake'); ?>">ყალბი ამბები</a></li>
+			<li><a class="b-link" href="<?php echo home_url('/fake'); ?>">ჩვენ შესახებ</a></li>
+			<li><a class="b-link" href="<?php echo home_url('/about'); ?>">დაამატე სერვისი</a></li>
 			<li>
 				<a style="margin-left: 30px;" href="https://www.facebook.com/prevencia.ge" class="main-link" target="_blank" rel="noopener noreferrer">
 					<img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" />
@@ -50,3 +51,5 @@
 		</div>
 	</div>
 </div>
+
+</header>

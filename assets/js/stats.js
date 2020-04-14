@@ -31,6 +31,11 @@
 		]
 		},
 		options: {
+            layout: {
+                padding: {
+                  right: 20
+                }
+              },
 			responsive: true,
 			defaultFontFamily: 'helvetica-regular',
 			title: {
@@ -49,9 +54,14 @@
 				intersect: true
 			},
 			scales: {
-				x: {
-					display: true,
-				},
+                xAxes: [{
+                    ticks: {
+                        display: false //this will remove only the label
+                    },
+                    gridLines: {
+                        display:false
+                    }
+                }],
 				y: {
 					display: true,
 				}
