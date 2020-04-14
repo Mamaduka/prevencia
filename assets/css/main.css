@@ -290,6 +290,17 @@ div.main-block {
   margin-bottom: 20px;
 }
 
+.offers .category-name a {
+  color: currentColor;
+}
+
+.offers .category-name a:active,
+.offers .category-name a:hover,
+.offers .category-name a:focus {
+  color: currentColor;
+  text-decoration: none;
+}
+
 .offers .offer-item .category-name [class^="dot-"] {
   width: 10px;
   height: 10px;
