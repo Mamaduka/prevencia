@@ -15,8 +15,6 @@ get_header(); ?>
 					<div class="subtitle">დისტანციური სერვისები რომელიც დაგეხმარებათ სახლიდან გაუსვლელად მიიღოთ ყველანაირი სერვისი</div>
 				</div>
 
-				<?php echo facetwp_display( 'facet', 'service_search' ); ?>
-
 				<div class="row">
 					<div class="col-md-3">
 						<p>სერვისების კატეგორიები</p>
