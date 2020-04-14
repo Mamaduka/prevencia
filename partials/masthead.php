@@ -33,7 +33,7 @@
 			<li><a class="b-link fakenews-link" href="#">ყალბი ამბები</a></li>
 			<li><a class="b-link contact-link" href="#">დაამატე სერვისი</a></li>
 			<li>
-				<a style="margin-left: 30px;" href="https://www.facebook.com/groups/prevencia.ge"  class="main-link" target="_blank" rel="noopener noreferrer">
+				<a style="margin-left: 30px;" href="https://www.facebook.com/prevencia.ge" class="main-link" target="_blank" rel="noopener noreferrer">
 					<img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" />
 				</a>
 			</li>
