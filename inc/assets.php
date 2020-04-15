@@ -87,7 +87,7 @@ function enqueue_stat_assets() {
 	$in_footer = true;
 
 	wp_register_script(
-		'moment',
+		'cdn-moment',
 		'https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js',
 		[],
 		'2.24.0',
@@ -95,7 +95,7 @@ function enqueue_stat_assets() {
 	);
 
 	wp_register_script(
-		'moment-ka',
+		'cdn-moment-ka',
 		'https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/ka.js',
 		[],
 		'2.24.0',
@@ -103,17 +103,9 @@ function enqueue_stat_assets() {
 	);
 
 	wp_register_script(
-		'chartjs-adapter-moment',
-		'https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1',
-		[],
-		'0.1.1',
-		$in_footer
-	);
-
-	wp_register_script(
 		'chartjs',
 		'https://cdn.jsdelivr.net/npm/chart.js@2.9.3',
-		[ 'moment', 'moment-ka', 'chartjs-adapter-moment' ],
+		[ 'cdn-moment', 'cdn-moment-ka' ],
 		'2.9.3',
 		$in_footer
 	);
