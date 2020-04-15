@@ -68,27 +68,61 @@ function enqueue_assets() {
 		$in_footer
 	);
 
+	wp_enqueue_script(
+		'prevencia-script',
+		get_template_directory_uri() . '/assets/js/scripts.min.js',
+		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slickjs', ],
+		VERSION,
+		$in_footer
+	);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
+
+/**
+ * Enqueue Chart.js assets.
+ *
+ * @return void
+ */
+function enqueue_stat_assets() {
+	$in_footer = true;
+
+	wp_register_script(
+		'moment',
+		'https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js',
+		[],
+		'2.24.0',
+		$in_footer
+	);
+
+	wp_register_script(
+		'moment-ka',
+		'https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/ka.js',
+		[],
+		'2.24.0',
+		$in_footer
+	);
+
+	wp_register_script(
+		'chartjs-adapter-moment',
+		'https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1',
+		[],
+		'0.1.1',
+		$in_footer
+	);
+
 	wp_register_script(
 		'chartjs',
-		'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js',
-		[],
+		'https://cdn.jsdelivr.net/npm/chart.js@2.9.3',
+		[ 'moment', 'moment-ka', 'chartjs-adapter-moment' ],
 		'2.9.3',
 		$in_footer
 	);
 
 	wp_register_script(
 		'prevencia-stats',
-		get_template_directory_uri() . '/assets/js/stats.js',
+		get_template_directory_uri() . '/assets/js/stats.min.js',
 		[ 'chartjs' ],
 		'2.9.3',
-		$in_footer
-	);
-
-	wp_enqueue_script(
-		'prevencia-script',
-		get_template_directory_uri() . '/assets/js/scripts.min.js',
-		[ 'jquery', 'jquery-ui-accordion', 'prevencia-bootstrap-js', 'slickjs', ],
-		VERSION,
 		$in_footer
 	);
 
@@ -98,7 +132,7 @@ function enqueue_assets() {
 		wp_localize_script( 'prevencia-stats', 'covidData', get_the_stats_data() );
 	}
 }
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_stat_assets' );
 
 /**
  * Add SVG definitions to footer.

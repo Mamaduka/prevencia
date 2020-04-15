@@ -17,11 +17,11 @@ function get_stats_raw_data() {
 }
 
 function get_the_stats_data() {
-	// $data = get_transient( 'covid_stats' );
+	$data = get_transient( 'covid_stats' );
 
-	// if ( ! empty( $data ) ) {
-	// 	return $data;
-	// }
+	if ( ! empty( $data ) ) {
+		return $data;
+	}
 
 	$raw = get_stats_raw_data();
 
@@ -40,13 +40,13 @@ function get_the_stats_data() {
 	];
 
 	foreach ( $raw as $d ) {
-		$data['date'][]      = to_RFC822( $d['date'] );
+		$data['date'][]      = normalize_date( $d['date'] );
 		$data['confirmed'][] = $d['confirmed'];
 		$data['deaths'][]    = $d['deaths'];
 		$data['recovered'][] = $d['recovered'];
 	}
 
-	// set_transient( 'covid_stats', $data, DAY_IN_SECONDS );
+	set_transient( 'covid_stats', $data, DAY_IN_SECONDS );
 
 	return $data;
 }
@@ -60,8 +60,8 @@ function get_the_stats_data() {
  * @param string $date
  * @return string
  */
-function to_RFC822( $date ) {
-	return ( new \DateTime( $date ) )->format( \DateTime::RFC2822 );
+function normalize_date( $date ) {
+	return ( new \DateTime( $date ) )->format( 'Y-m-d' );
 }
 
 /**

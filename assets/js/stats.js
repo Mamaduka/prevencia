@@ -1,5 +1,8 @@
  // Chart.
  function initChart( { date, confirmed, deaths, recovered } ) {
+	// Localize moment.js
+	moment.locale('ka')
+
 	const config = {
 		type: 'line',
 		data: {
