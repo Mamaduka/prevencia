@@ -82,6 +82,10 @@ h3.header {
   margin-bottom: 40px;
 }
 
+.header-right{
+  display: block;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -101,7 +105,7 @@ h3.header {
   top: 32;
 }
 
-.header a.add-service-button {
+ a.add-service-button {
   background: #fee9b3;
   border-radius: 36px;
   padding: 18px 45px;
@@ -146,6 +150,7 @@ div.main-block {
 }
 
 .btn-yellow {
+  height: 60px !important;
   border-radius: 36px;
   padding: 18px;
   background: #fee9b3;
@@ -223,6 +228,9 @@ div.main-block {
 
 .main-block .statistics .item .date .stopcov a {
   color: rgba(0, 0, 0, 0.2);
+}
+.main-block .statistics .item svg{
+
 }
 
 .statistics .title-item {
@@ -1029,8 +1037,19 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  
+  .header-right{
+    display: none;
+  }
+
   .fake-news{
     width: 100%;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .light-btn{
+      margin-top: 0;
   }
 
   .items-container {
@@ -1054,9 +1073,6 @@ footer {
     font-size: 40px;
   }
 
-  .header {
-    margin-bottom: 30px;
-  }
 
   .header .menu {
     display: none;
@@ -1098,8 +1114,31 @@ button.show-all {
 }
 
 @media (max-width: 768px) {
+
+  .hero-container{
+      padding: 15px;
+  
+      height: 106px;
+      margin-top: 30px;
+      border-radius: 10px;
+  }
+
+  .hero-container h3.header{
+      margin: 0;
+      padding: 0;
+      font-size: 25px;
+  }
+
+  .page-container {
+      padding-top: 0 !important;
+  }
+
   .offers .offer-item .description .more-text {
     display: none;
+  }
+
+  .statistics{
+      margin-top: 30px;
   }
 
   .offers .offer-item .company-title {
@@ -1110,11 +1149,63 @@ button.show-all {
     display: block;
     margin: 0 auto;
   }
+
+  #statistics-tabs li{
+      margin: 0;
+      width: 48%;
+  }
+
+  #statistics-tabs li a{
+      width: 100%;
+      padding: 8px 15px;
+  }
+
+  .statistics .title-item{
+      padding: 0 25px;
+  }
+
+  #statistics-tabs{
+      padding: 0 25px;
+      justify-content: space-between;
+      display: flex;
+  }
+
+  #statistics-tabs li a.inactive{
+      padding: 8px 15px;
+  }
+
+  .main-block .statistics .item{
+      padding: 0 40px;
+      margin-bottom: 25px;
+  }
+
+  div.main-block{
+      padding: 15px 0;
+  }
+
 }
 
 @media (max-width: 480px) {
+
+  .hero-container{
+      background: url('../img/mobile-hero-bg.png') no-repeat !important;
+      background-size: cover;
+  }
+
+  .hero-container div.subtitle{
+      display: none;
+  }
+
+  .main-block .statistics .subtitle{
+      margin: 0;
+  }
+
   .items-container {
     padding-bottom: 20px;
+  }
+
+  .main-block .statistics .subtitle{
+      font-size: 12px;
   }
 
   div.main-block {
@@ -1155,7 +1246,7 @@ button.show-all {
   }
 
   .offers .add-item p.description {
-    margin-top: 40px;
+    margin-top: 130px;
     font-size: 24px;
   }
 
@@ -1169,7 +1260,8 @@ button.show-all {
   }
 
   .offers .add-item {
-    height: 230px !important;
+    height: 350px !important;
+    background-position: bottom;
   }
 
   .main-block .content .subtitle {
@@ -1179,7 +1271,7 @@ button.show-all {
 
   .main-block .statistics {
     padding: 20px 0;
-    display: none;
+    /* display: none; */
   }
 
   .main-block .content h3 {
@@ -1372,21 +1464,24 @@ button.show-all {
 }
 
 .b-bun--top {
-  height: 2px;
-  top: 0;
-  width: 25px;
+  height: 4px;
+  border-radius: 10px;
+  top: 4px;
+  width: 30px;
 }
 
 .b-bun--mid {
   height: 2px;
   top: 8px;
   width: 25px;
+  visibility: hidden;
 }
 
 .b-bun--bottom {
-  height: 2px;
-  top: 16px;
-  width: 25px;
+  height: 4px;
+  top: 12px;
+  border-radius: 10px;
+  width: 30px;
 }
 
 .b-brand {
@@ -1406,7 +1501,7 @@ button.show-all {
   height: 60px;
   right: 30px;
   position: absolute;
-  top: 30px;
+  top: 20px;
 }
 
 .b-container:hover:not(.open) .bun-top,
@@ -1421,7 +1516,7 @@ button.show-all {
 
 .b-container.open .b-bun--top {
   background: #444444;
-  top: 9px;
+  top: 11px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }

@@ -18,7 +18,7 @@
 		</div>
 	
 
-		<div>
+		<div class="header-right">
 		<a class='add-service-button' href="<?php echo home_url('#service-form'); ?>" class='contact-link'>სერვისის დამატება</a>
 		<a href="https://www.facebook.com/groups/prevencia.ge" target="_blank"><img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" /></a>
 		</div>
@@ -31,10 +31,11 @@
 			</li>
 			<li><a class="b-link recommendations-link" href="#">რეკომენდაციები</a></li>
 			<li><a class="b-link" href="<?php echo home_url('/fake'); ?>">ყალბი ამბები</a></li>
-			<li><a class="b-link" href="<?php echo home_url('/fake'); ?>">ჩვენ შესახებ</a></li>
-			<li><a class="b-link" href="<?php echo home_url('/about'); ?>">დაამატე სერვისი</a></li>
+			<li><a class="b-link" href="<?php echo home_url('/about'); ?>">ჩვენ შესახებ</a></li>
+			<li><a class="b-link" href="<?php echo home_url('/terms'); ?>">პირობები</a></li>
 			<li>
-				<a style="margin-left: 30px;" href="https://www.facebook.com/prevencia.ge" class="main-link" target="_blank" rel="noopener noreferrer">
+			<a class='b-link add-service-button' href="#" class='contact-link'>სერვისის დამატება</a>
+				<a href="https://www.facebook.com/prevencia.ge" class="main-link" target="_blank" rel="noopener noreferrer">
 					<img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" />
 				</a>
 			</li>
