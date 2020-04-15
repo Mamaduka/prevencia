@@ -70,7 +70,7 @@ function enqueue_assets() {
 
 	wp_register_script(
 		'chartjs',
-		'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js',
+		'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js',
 		[],
 		'2.9.3',
 		$in_footer
@@ -78,7 +78,7 @@ function enqueue_assets() {
 
 	wp_register_script(
 		'prevencia-stats',
-		get_template_directory_uri() . '/assets/js/stats.min.js',
+		get_template_directory_uri() . '/assets/js/stats.js',
 		[ 'chartjs' ],
 		'2.9.3',
 		$in_footer

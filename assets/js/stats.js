@@ -31,11 +31,11 @@
 		]
 		},
 		options: {
-            layout: {
-                padding: {
-                  right: 20
-                }
-              },
+			layout: {
+				padding: {
+				right: 20
+				}
+			},
 			responsive: true,
 			defaultFontFamily: 'helvetica-regular',
 			title: {
@@ -54,17 +54,15 @@
 				intersect: true
 			},
 			scales: {
-                xAxes: [{
-                    ticks: {
-                        display: false //this will remove only the label
-                    },
-                    gridLines: {
-                        display:false
-                    }
-                }],
-				y: {
-					display: true,
-				}
+				xAxes: [{
+					type: 'time',
+					gridLines: {
+						display: false
+					},
+					time: {
+						minUnit: 'month'
+					}
+				}]
 			}
 		}
 	};
