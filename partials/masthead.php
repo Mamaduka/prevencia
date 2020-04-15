@@ -9,8 +9,8 @@
 		</div>
 		<div>
 			<ul class="menu">
-				<li><a href="<?php echo home_url('/services'); ?>">დისტანციური სერვისები</a></li>
-				<li><a href="<?php echo home_url('/fake'); ?>" >ყალბი ამბები</a></li>
+				<li><a href="<?php echo home_url('/remote-services'); ?>">დისტანციური სერვისები</a></li>
+				<li><a href="<?php echo home_url('/fake-news'); ?>" >ყალბი ამბები</a></li>
 				<li><a href="<?php echo home_url('#FAQ'); ?>" class='recommendations-link'>რეკომენდაციები</a></li>
 				<li><a href="<?php echo home_url('/about'); ?>" >ჩვენ შესახებ</a></li>
 			</ul>
