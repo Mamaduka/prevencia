@@ -39,11 +39,24 @@
 		<div class="col-md-6">
 			<select name="SERVICES" title="შეავსეთ ველი" id="services" class="form-control" required>
 				<option selected="selected" disabled>აირჩიეთ კატეგორია</option>
-				<option>ჯანმრთელობა</option>
+				<option>B2B</option>
+				<option>IT</option>
+				<option>გადაზიდვა</option>
 				<option>განათლება</option>
-				<option>კვება</option>
+				<option>გართობა</option>
+				<option>დაზღვევა</option>
+				<option>კვება და სასმელი</option>
+				<option>ონლაინ მაღაზია</option>
+				<option>სამართალი</option>
+				<option>სამშენებლო</option>
+				<option>სახელმწიფო სერვისები</option>
+				<option>სახლი</option>
+				<option>სხვა</option>
+				<option>ტანსაცმელი და აქსესუარები</option>
 				<option>ტელეკომუნიკაცია</option>
-				<option>სხვადასხვა</option>
+				<option>ტექნიკა</option>
+				<option>ფინანსები</option>
+				<option>ჯანმრთელობა და ჰიგიენა</option>
 			</select>
 		</div>
 		<div class="col-md-6">
