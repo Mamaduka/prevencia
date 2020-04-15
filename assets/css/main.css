@@ -644,7 +644,7 @@ div.main-block {
   width: calc(100% - 250px);
   border-radius: 30px;
   margin: 0 auto;
-  padding: 40px 0 70px 0;
+  padding-bottom: 30px;
 }
 
 .fake-news h3.header {
@@ -1479,4 +1479,5 @@ button.show-all {
 
 .page-container {
   background: #f7f7f8;
+  padding-top: 30px;
 }

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <body <?php body_class(); ?>>
-	<div class="page-container">
-		<?php get_template_part( 'partials/masthead' ); ?>
+	<?php get_template_part( 'partials/masthead' ); ?>
 
+	<div class="page-container">
 		<div class='fake-news fake-news-inner'>
 			<div class="container">
 			<div class="hero-container">
@@ -22,10 +22,9 @@
 				<?php endif; ?>
 			</div>
 		</div>
+	</div>
 
 	<?php get_template_part( 'partials/footer' ); ?>
-
-	</div>
 
 	<?php do_action( 'wp_footer' ); ?>
 </body>
