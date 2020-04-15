@@ -114,7 +114,7 @@ function enqueue_stat_assets() {
 		'prevencia-stats',
 		get_template_directory_uri() . '/assets/js/stats.min.js',
 		[ 'chartjs' ],
-		'2.9.3',
+		VERSION,
 		$in_footer
 	);
 

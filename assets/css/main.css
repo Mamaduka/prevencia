@@ -82,19 +82,23 @@ h3.header {
   margin-bottom: 40px;
 }
 
-.sticky-header{
-  position: fixed;
-  width: 100%;
-  background: #fff;
-  z-index: 99999;
-  border-bottom: 1px solid #eaeaec;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
   align-items: center;
+}
+
+#sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+}
+
+.admin-bar #sticky {
+  top: 32;
 }
 
 .header a.add-service-button {

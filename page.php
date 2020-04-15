@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<body>
+<body <?php body_class(); ?>>
 <?php get_template_part( 'partials/masthead' ); ?>
 	<div class="page-container ">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

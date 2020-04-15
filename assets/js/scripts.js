@@ -1,14 +1,5 @@
 jQuery(function ($) {
 
-    if (window.innerWidth > 1024){
-       $(window).scroll(function(){
-           var sticky = $('#sticky'),
-               scroll = $(window).scrollTop();
-           if (scroll >= 150) sticky.addClass('sticky-header');
-           else sticky.removeClass('sticky-header');
-         });
-    }
-
    $("#accordion").accordion({
        active: 999,
        collapsible: true

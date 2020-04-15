@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<body>
+<body <?php body_class(); ?>>
 	<?php get_template_part( 'partials/masthead' ); ?>
 
 	<div class="main-block">

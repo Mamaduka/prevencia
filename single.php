@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<body>
+<body <?php body_class(); ?>>
 	<div class="main-block whiten">
 		<?php get_template_part( 'partials/masthead' ); ?>
 

@@ -4,7 +4,7 @@ use function Prevencia\get_svg;
 
 get_header(); ?>
 
-<body>
+<body <?php body_class(); ?>>
 	<?php get_template_part( 'partials/masthead' ); ?>
 
 	<div class="main-block plain">
