@@ -164,4 +164,6 @@ jQuery(function ($) {
         $('.toolbar').show();
         $('.facetwp-pager').show();
     });
+
+    
 });
