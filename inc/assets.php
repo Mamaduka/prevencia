@@ -26,21 +26,14 @@ function enqueue_assets() {
 
 	wp_enqueue_style(
 		'prevencia-slick-slider-css',
-		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css',
 		[],
 		'1.8.1'
 	);
 
 	wp_enqueue_style(
-		'chartjs-css',
-		'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css',
-		[],
-		'2.9.3'
-	);
-
-	wp_enqueue_style(
 		'prevencia-slick-slider-theme-css',
-		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css',
 		[],
 		'1.9.0'
 	);
@@ -78,6 +71,13 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_assets' );
 function enqueue_stat_assets() {
 	$in_footer = true;
 
+	wp_enqueue_style(
+		'chartjs-css',
+		'https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css',
+		[],
+		'2.9.3'
+	);
+
 	wp_register_script(
 		'cdn-moment',
 		'https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js',
@@ -88,7 +88,7 @@ function enqueue_stat_assets() {
 
 	wp_register_script(
 		'cdn-moment-ka',
-		'https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/ka.js',
+		'https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/ka.min.js',
 		[],
 		'2.24.0',
 		$in_footer
