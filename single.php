@@ -8,19 +8,16 @@
 
 		<div class='container'>
 			<div class="blog-inner-container">
-				<div class="top">
-					<?php if ( get_post_type() === 'fake-news' ) : ?>
-						<span class="fakenews">ყალბი ამბები</span>
-					<?php endif; ?>
-					<span class="date"><?php echo wp_date( 'F j, Y' ); ?></span>
-				</div>
+				
 
 				<div class="title"><?php the_title(); ?></div>
 
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'image' ] ); ?>
 				<?php endif; ?>
-
+				<div class="top">
+					<span class="date"><?php echo wp_date( 'F j, Y' ); ?></span>
+				</div>
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div>

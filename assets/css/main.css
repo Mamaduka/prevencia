@@ -113,6 +113,12 @@ h3.header {
   font-size: 14px;
   color: black;
   display: inline-block;
+  transition: all 0.3s;
+}
+
+a.add-service-button:hover{
+  background: white;
+  box-shadow: 0 3px 6px #F0F3F7;
 }
 
 div.main-block {
@@ -278,6 +284,21 @@ div.main-block {
 }
 
 /********************* OFFER BLOCK ********************/
+.offers .facetwp-checkbox{
+    background: url('../img/filter-unchecked.png') no-repeat;
+    padding-left: 32px;
+    min-height: 25px;
+    margin-bottom: 15px;
+}
+
+.offers .facetwp-checkbox.checked{
+  background: url('../img/filter-checked.png') no-repeat;
+}
+
+.offers .facetwp-counter{
+    opacity: 0.5;
+}
+
 .offers .archive-item {
   transition: width 3s ease-in-out;
 }
@@ -754,8 +775,8 @@ div.main-block {
 
 .accordion .heading .circle {
   position: absolute;
-  right: 40px;
-  transform: rotate(-90deg);
+  right: 0px;
+
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -766,6 +787,10 @@ div.main-block {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.accordion .open .heading .circle{
+  transform: rotate(90deg) !important;
 }
 
 .accordion .desc {
@@ -1119,11 +1144,15 @@ button.show-all {
 
 @media (max-width: 768px) {
 
+  #toList{
+      display: none;
+  }
+
   .hero-container{
       padding: 15px;
   
       height: 106px;
-      margin-top: 30px;
+     
       border-radius: 10px;
   }
 
@@ -1133,9 +1162,6 @@ button.show-all {
       font-size: 25px;
   }
 
-  .page-container {
-      padding-top: 0 !important;
-  }
 
   .offers .offer-item .description .more-text {
     display: none;
@@ -1190,10 +1216,13 @@ button.show-all {
 }
 
 @media (max-width: 480px) {
+  .hero-container h2{
+      font-size: 25px;
+  }
 
   .hero-container{
-      background: url('../img/mobile-hero-bg.png') no-repeat !important;
-      background-size: cover;
+      background-size: auto;
+      background-position: -80px;
   }
 
   .hero-container div.subtitle{
@@ -1308,7 +1337,7 @@ button.show-all {
   }
 
   .blog-inner-container {
-    padding: 0;
+    padding: 20px;
   }
 
   .blog-inner-container .title {
@@ -1320,9 +1349,7 @@ button.show-all {
     font-size: 16px;
   }
 
-  .blog-inner-container .top .date {
-    margin-left: 20px;
-  }
+
 }
 
 /*************** BURGER MENU ******************/
