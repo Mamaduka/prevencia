@@ -3,8 +3,8 @@
 	<div class='header'>
 		<div class='d-flex align-items-center'>
 		<div class='logo'>
-			<a href="<?php echo home_url(); ?>">
-				<img src="<?php echo Prevencia\the_asset('/img/logo.png'); ?>" alt='logo' />
+			<a href="<?php echo home_url('/'); ?>">
+				<img src="<?php echo Prevencia\the_asset('/img/logo.png'); ?>" alt="logo" width="237" height="43" />
 			</a>
 		</div>
 		<div>
