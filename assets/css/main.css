@@ -697,6 +697,10 @@ div.main-block {
   margin-bottom: 30px;
 }
 
+.fake-news .fake-item *:not(:first-child) {
+  padding: 0 25px;
+}
+
 .fake-news .fake-item .image {
   display: block;
   background-repeat: no-repeat;
