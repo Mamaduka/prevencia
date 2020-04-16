@@ -35,7 +35,7 @@ $hide_on_list =  is_archive() ? 'hide-on-list' : '';
 		</div>
 
 		<?php if ( is_archive() ) : ?>
-			<button class="expand">წყარო</button>
+			<button class="expand">გაიგე მეტი</button>
 		<?php endif; ?>
 	</div>
 </div>
