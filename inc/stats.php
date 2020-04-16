@@ -46,7 +46,7 @@ function get_the_stats_data() {
 		$data['recovered'][] = $d['recovered'];
 	}
 
-	set_transient( 'covid_stats', $data, DAY_IN_SECONDS );
+	set_transient( 'covid_stats', $data, 6 * HOUR_IN_SECONDS );
 
 	return $data;
 }
