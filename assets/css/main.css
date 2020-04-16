@@ -105,7 +105,7 @@ h3.header {
   top: 32;
 }
 
- a.add-service-button {
+.add-service-button {
   background: #fee9b3;
   border-radius: 36px;
   padding: 18px 45px;
@@ -113,12 +113,16 @@ h3.header {
   font-size: 14px;
   color: black;
   display: inline-block;
+  border: 1px solid transparent;
   transition: all 0.3s;
 }
 
-a.add-service-button:hover{
-  background: white;
+.add-service-button:hover{
+  color: #000;
+  background: #fff;
+  border: 1px solid #DCDFE5;
   box-shadow: 0 3px 6px #F0F3F7;
+  text-decoration: none;
 }
 
 div.main-block {
