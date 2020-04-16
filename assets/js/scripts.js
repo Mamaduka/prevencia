@@ -1,9 +1,17 @@
 jQuery(function ($) {
 
-    $("#accordion").accordion({
-        active: 999,
-        collapsible: true
-    });
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach( ( element ) => {
+        element.addEventListener( 'click', () => {
+            if (element.classList.contains('open')) {
+                element.classList.remove('open');
+            } else {
+                accordionItems.forEach( other => other.classList.remove('open') );
+                element.classList.add('open');
+            }
+        } );
+    } )
 
     $(".add-item").click(function () {
         $('html, body').animate({

@@ -724,21 +724,23 @@ div.main-block {
 
 /***************** Accordion **************/
 
-.FAQ {
+.recommendations {
   margin-bottom: 70px;
 }
 
-#accordion .ui-state-active .circle {
+.accordion .open .circle {
   transform: rotate(0deg) !important;
 }
 
-#accordion .ui-state-active {
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+.accordion .accordion-item {
+  background: #f7f7f8;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 0 40px;
 }
 
-#accordion .heading {
-  background: #f7f7f8;
+.accordion .heading {
   color: black !important;
   cursor: pointer;
   outline: none;
@@ -746,12 +748,11 @@ div.main-block {
   font-size: 18px;
   font-family: helvetica-medium;
   border: none !important;
-  padding: 30px 40px;
-  border-radius: 15px;
+  padding: 30px 0;
   margin: 10px 0;
 }
 
-#accordion .heading .circle {
+.accordion .heading .circle {
   position: absolute;
   right: 40px;
   transform: rotate(-90deg);
@@ -767,13 +768,18 @@ div.main-block {
   align-items: center;
 }
 
-#accordion .desc {
-  padding: 0 40px 30px 40px;
-  background: #f7f7f8;
-  margin-top: -16px;
+.accordion .desc {
   font-family: helvetica-regular;
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
+  max-height: 0;
+  padding: 0;
+  transition: all 0.15s;
+}
+
+.accordion .open .desc {
+  max-height: 100vw;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  transition: all 0.15s;
 }
 
 /************** SERVICE FORM **************/
