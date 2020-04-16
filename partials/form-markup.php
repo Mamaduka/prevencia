@@ -57,6 +57,7 @@
 				<option>ტექნიკა</option>
 				<option>ფინანსები</option>
 				<option>ჯანმრთელობა და ჰიგიენა</option>
+				<option>სხვა</option>
 			</select>
 		</div>
 		<div class="col-md-6">

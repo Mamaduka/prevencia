@@ -27,10 +27,10 @@
 	<div>
 		<!-- Navigation -->
 		<div class="b-nav">
-			<li><a class="b-link" href="<?php echo home_url('/services'); ?>">დისტანციური სერვისები</a>
+			<li><a class="b-link" href="<?php echo home_url('/remote-services'); ?>">დისტანციური სერვისები</a>
 			</li>
 			<li><a class="b-link recommendations-link" href="#">რეკომენდაციები</a></li>
-			<li><a class="b-link" href="<?php echo home_url('/fake'); ?>">ყალბი ამბები</a></li>
+			<li><a class="b-link" href="<?php echo home_url('/fake-news'); ?>">ყალბი ამბები</a></li>
 			<li><a class="b-link" href="<?php echo home_url('/about'); ?>">ჩვენ შესახებ</a></li>
 			<li><a class="b-link" href="<?php echo home_url('/terms'); ?>">პირობები</a></li>
 			<li>

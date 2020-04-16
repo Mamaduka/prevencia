@@ -106,7 +106,7 @@ h3.header {
   top: 32;
 }
 
- a.add-service-button {
+.add-service-button {
   background: #fee9b3;
   border-radius: 36px;
   padding: 18px 45px;
@@ -124,6 +124,7 @@ a.add-service-button:hover{
   border: 1px solid #DCDFE5;
   background: white;
   box-shadow: 0 3px 6px #F0F3F7;
+  text-decoration: none;
 }
 
 div.main-block {
@@ -714,6 +715,10 @@ div.main-block {
 .fake-news .fake-item:hover{
     border: 1px solid #EFEFEF;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fake-news .fake-item *:not(:first-child) {
+  padding: 0 25px;
 }
 
 .fake-news .fake-item .image {
