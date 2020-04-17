@@ -504,8 +504,8 @@ div.main-block {
   text-align: center;
 }
 
-.offers .offer-item .source,
-.offers .offer-item .expand {
+.offers .offer-item .expand,
+.expanded .offer-item .source {
   display: inline-flex;
   text-align: center;
   background: #f7f7f8;
@@ -566,17 +566,18 @@ div.main-block {
 .archive-item:not(.expanded) .go-back,
 .archive-item:not(.expanded) .full,
 .archive-item:not(.expanded) .source {
-  display: none;
+  display: flex;
+  visibility: hidden;
+  max-height: 0;
 }
+
 .expanded .offer-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.expanded .go-back {
-  /* padding: 0px 25px; */
-}
+
 .expanded .go-back button {
   -webkit-appearance: none;
   appearance: none;
@@ -706,11 +707,10 @@ div.main-block {
 
 .slick-prev img,
 .slick-next img{
- max-width: 20px;
-
+  max-width: 20px;
  z-index: 99;
-}
 
+}
 .slick-prev,
 .slick-next{
   cursor: pointer;
@@ -1427,19 +1427,19 @@ button.show-all {
 @media (max-width: 480px) {
 
   .offers-carousel .title{
-      font-size: 14px;
-      margin: 0;
-  }
+    font-size: 14px;
+    margin: 0;
+}
 
-  .arrow-container div{
-      padding: 10px;
-      margin-left: 5px;
-  }
+.arrow-container div{
+    padding: 10px;
+    margin-left: 5px;
+}
 
-  .offers-carousel .container{
-      display: flex;
-      align-items: center;
-  }
+.offers-carousel .container{
+    display: flex;
+    align-items: center;
+}
 
   .slick-slide,
   .slick-list {
