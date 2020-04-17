@@ -706,19 +706,22 @@ div.main-block {
 
 .slick-prev img,
 .slick-next img{
- max-width: 50px;
- cursor: pointer;
+ max-width: 20px;
 
  z-index: 99;
-
 }
 
+.slick-prev,
 .slick-next{
-    right: -50px;
+  cursor: pointer;
 }
 
-.slick-prev{
-  left: -50px;
+.arrow-container div{
+    background: #F7F7F8;
+    padding: 15px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .offers .offers-carousel .slick-dots {
@@ -1422,6 +1425,21 @@ button.show-all {
 }
 
 @media (max-width: 480px) {
+
+  .offers-carousel .title{
+      font-size: 14px;
+      margin: 0;
+  }
+
+  .arrow-container div{
+      padding: 10px;
+      margin-left: 5px;
+  }
+
+  .offers-carousel .container{
+      display: flex;
+      align-items: center;
+  }
 
   .slick-slide,
   .slick-list {
