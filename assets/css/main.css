@@ -499,21 +499,6 @@ div.main-block {
   text-decoration: none;
 }
 
-.offers .offer-item .category-name [class^="dot-"] {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-radius: 50%;
-  background: gray;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-.offers .offer-item .category-name .dot-online-shop {
-  background: #e84f4f;
-  display: none;
-}
-
 .offers .offer-item .img-circle {
   text-align: center;
 }
@@ -542,7 +527,8 @@ div.main-block {
   font-family: helvetica-medium;
 }
 
-.offers .offer-item .description {
+.offers .offer-item .offer-content {
+  color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
 }
 

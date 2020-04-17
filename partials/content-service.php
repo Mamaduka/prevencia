@@ -6,7 +6,6 @@ $hide_on_list =  is_archive() ? 'hide-on-list' : '';
 	<div class='offer-item'>
 		<header class="offer-header">
 			<div class='category-name'>
-				<span class='dot-online-shop'></span>
 				<?php echo Prevencia\get_service_category(); ?>
 			</div>
 
@@ -26,7 +25,7 @@ $hide_on_list =  is_archive() ? 'hide-on-list' : '';
 		</header>
 
 		<div class="offer-content">
-			<strong class="excerpt"><?php echo get_the_excerpt(); ?></strong>
+			<span class="excerpt"><?php echo get_the_excerpt(); ?></span>
 
 			<?php if ( is_archive() ) : ?>
 				<span class="full"><?php the_content(); ?></span>
