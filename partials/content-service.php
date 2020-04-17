@@ -27,12 +27,15 @@ $hide_on_list =  is_archive() ? 'hide-on-list' : '';
 
 		<div class="offer-content">
 			<strong class="excerpt"><?php echo get_the_excerpt(); ?></strong>
-			<span class="full"><?php the_content(); ?></span>
-			<?php echo Prevencia\get_service_source(); ?>
+
+			<?php if ( is_archive() ) : ?>
+				<span class="full"><?php the_content(); ?></span>
+				<?php echo Prevencia\get_service_source(); ?>
+			<?php endif; ?>
 		</div>
 
 		<?php if ( is_archive() ) : ?>
-			<button class="expand">წყარო</button>
+			<button class="expand">გაიგე მეტი</button>
 		<?php endif; ?>
 	</div>
 </div>
