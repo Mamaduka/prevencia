@@ -79,8 +79,22 @@ jQuery(function ($) {
     }
 
 
+
+    /* In the JS file */
+$('.slider').slick({
+    arrows: false
+  })
+  
+  $('.slick-prev').click(function(){
+    $('.category-slider').slick('slickPrev');
+  })
+  
+  $('.slick-next').click(function(){
+    $('.category-slider').slick('slickNext');
+  })
+
     $('.category-slider').slick({
-        arrows: true,
+        arrows: false,
         dots: false,
         slidesToShow: 4,
         slidesToScroll: 4,

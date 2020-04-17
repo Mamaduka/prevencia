@@ -704,13 +704,13 @@ div.main-block {
   justify-content: space-between;
 }
 
-.slick-prev,
-.slick-next{
+.slick-prev img,
+.slick-next img{
  max-width: 50px;
  cursor: pointer;
- position: absolute;
+
  z-index: 99;
- top: calc(40% - 25px);
+
 }
 
 .slick-next{
