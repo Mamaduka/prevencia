@@ -31,7 +31,8 @@ body.open .b-container {
   z-index: 999;
 }
 
-.logo img {
+.logo img,
+.footer-logo img {
   margin-right: 30px;
 }
 

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="footer-content">
 			<div class="d-flex align-items-center">
-				<div class="logo">
+				<div class="footer-logo">
 					<a href="<?php echo home_url('/'); ?>">
 					<img src="<?php echo Prevencia\the_asset('/img/logo.png'); ?>" alt="logo" width="237" height="43" />
 					</a>
