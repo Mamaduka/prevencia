@@ -1023,7 +1023,7 @@ div.main-block {
 }
 
 /************** SERVICE FORM **************/
-
+/** Might break on Safari */
 input::placeholder {
   overflow: visible !important;
 }
