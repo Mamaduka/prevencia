@@ -836,34 +836,28 @@ div.main-block {
 
 /************** SERVICE FORM **************/
 
-
 input::placeholder {
   overflow: visible !important;
 }
 
-.hf-form,
-#serviceForm {
+.hf-form {
   margin-bottom: 80px;
 }
 
-.hf-form .error,
-#serviceForm .error {
+.hf-form .error {
   border-color: red !important;
 }
 
-.hf-form button,
-#serviceForm button {
+.hf-form button {
   height: 74px;
   width: 200px;
 }
 
-.hf-form label.error,
-#serviceForm label.error {
+.hf-form label.error {
   transform: translateY(-20px);
 }
 
-.hf-form input,
-#serviceForm input {
+.hf-form input {
   padding: 29px 30px;
   background: #f7f7f8;
   border: 1px solid #f7f7f8;
@@ -873,8 +867,7 @@ input::placeholder {
   margin-bottom: 30px;
 }
 
-.hf-form div.fake-input,
-#serviceForm div.fake-input {
+.hf-form div.fake-input {
   padding: 29px 30px;
   border-radius: 100px;
   background: #f7f7f8;
@@ -886,13 +879,11 @@ input::placeholder {
   cursor: pointer;
 }
 
-.hf-form #logo,
-#fileInput {
+.hf-form #logo {
   display: none;
 }
 
-.hf-form div.fake-input span,
-#serviceForm div.fake-input span {
+.hf-form div.fake-input span {
   background: #fff;
   display: inline-block;
   border-radius: 100px;
@@ -903,8 +894,7 @@ input::placeholder {
   top: 7px;
 }
 
-.hf-form input[type="submit"],
-#serviceForm input[type="submit"] {
+.hf-form input[type="submit"] {
   width: 250px;
   height: 74px;
   border-radius: 10px;
@@ -912,21 +902,22 @@ input::placeholder {
   font-size: 18px;
 }
 
-.hf-form select,
-#serviceForm select {
+.hf-form select {
   outline: none;
   box-shadow: none !important;
   border-radius: 100px;
-  background: #f7f7f8;
+  /* The SVG is arrow-down-alt2 from Dashicons. */
+  background: #f7f7f8 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E') no-repeat right 25px top 55%;
   border: 1px solid #f7f7f8;
   font-size: 16.6px;
   padding: 0px 25px;
   height: 60px;
   margin-bottom: 30px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.hf-form textarea,
-#serviceForm textarea {
+.hf-form textarea {
   resize: none;
   border-radius: 30px;
   background: #f7f7f8;
@@ -938,8 +929,7 @@ input::placeholder {
   margin-bottom: 30px;
 }
 
-.hf-form .block,
-#serviceForm .block {
+.hf-form .block {
   margin-top: 30px;
 }
 
