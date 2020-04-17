@@ -269,7 +269,7 @@ h3.header {
   top: 32;
 }
 
-.add-service-button {
+a.add-service-button {
   background: #fee9b3;
   border-radius: 36px;
   padding: 18px 45px;
