@@ -16,7 +16,7 @@
 					<?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'image' ] ); ?>
 				<?php endif; ?>
 				<div class="top">
-					<span class="date"><?php echo wp_date( 'F j, Y' ); ?></span>
+					<span class="date"><?php echo get_post_time( 'm-d-Y' ); ?></span>
 				</div>
 				<div class="entry-content">
 					<?php the_content(); ?>
