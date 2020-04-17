@@ -504,8 +504,8 @@ div.main-block {
   text-align: center;
 }
 
-.offers .offer-item .source,
-.offers .offer-item .expand {
+.offers .offer-item .expand,
+.expanded .offer-item .source {
   display: inline-flex;
   text-align: center;
   background: #f7f7f8;
@@ -566,8 +566,11 @@ div.main-block {
 .archive-item:not(.expanded) .go-back,
 .archive-item:not(.expanded) .full,
 .archive-item:not(.expanded) .source {
-  display: none;
+  display: flex;
+  visibility: hidden;
+  max-height: 0;
 }
+
 .expanded .offer-header {
   display: flex;
   flex-wrap: wrap;
