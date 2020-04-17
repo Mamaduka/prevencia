@@ -65,7 +65,7 @@ use function Prevencia\get_stat;
 
 						<div class="item col-md-12">
 							<p class='subtitle'>ბოლოს განახლებული</p>
-							<div class="date"><?php echo get_the_modified_date('G:i სთ / j F'); ?><span class="stopcov"><a href='https://stopcov.ge/' target="_blank">წყარო: stopcov.ge</a></div>
+							<div class="date"><?php echo get_the_modified_date('G:i სთ / d-m'); ?><span class="stopcov"><a href='https://stopcov.ge/' target="_blank">წყარო: stopcov.ge</a></div>
 						</div>
 					</div>
 				</div>
