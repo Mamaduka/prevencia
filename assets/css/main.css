@@ -1344,7 +1344,8 @@ button.show-all {
 
 @media (max-width: 768px) {
 
-  .footer-right{
+  .footer-right,
+  .footer-content .menu {
     display: none;
   }
 
