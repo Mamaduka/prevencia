@@ -709,7 +709,7 @@ div.main-block {
  cursor: pointer;
  position: absolute;
  z-index: 99;
- top: calc(40% - 25px);   
+ top: calc(40% - 25px);
 }
 
 .slick-next{
@@ -730,7 +730,7 @@ div.main-block {
   margin-left: 50px;
 }
 
-.offers .offers-carousel .category-slider a.slider-item {
+.offers .offers-carousel .category-slider .slider-item {
   background: white;
   border-radius: 15px;
   padding: 30px;
@@ -739,7 +739,10 @@ div.main-block {
   max-height: 146px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+}
+
+.offers .category-slider .category-name {
+  margin-left: 30px;
 }
 
 .slick-dotted.slick-slider{
@@ -1263,7 +1266,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  
+
   .header-right{
     display: none;
   }
@@ -1351,9 +1354,9 @@ button.show-all {
 
   .hero-container{
       padding: 15px;
-  
+
       height: 106px;
-     
+
       border-radius: 10px;
   }
 
@@ -1505,7 +1508,7 @@ button.show-all {
       font-size: 25px;
   }
 
-  
+
 
   .hero-container{
       background-size: auto;
