@@ -37,7 +37,7 @@ add_filter( 'facetwp_pager_html', function( $output, $params ) {
 	$output = '';
 	$template = '
 	<nav class="navigation" role="navigation" aria-label="ნავიგაცია">
-		<ul class="pagination pagination-lg justify-content-center">%s</ul>
+		<ul class="pagination pagination-lg justify-content-center flex-wrap">%s</ul>
 	</nav>';
 
 	$page = $params['page'];

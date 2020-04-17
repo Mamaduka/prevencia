@@ -11,7 +11,7 @@
 	] );
 ?>
 
-<div class="recommendations">
+<div id="faq" class="recommendations">
 	<div class="container">
 		<h3 class='header'>რეკომენდაციები</h3>
 		<?php if ( $faqs->have_posts() ) : ?>

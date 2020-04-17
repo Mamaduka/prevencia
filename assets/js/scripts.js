@@ -22,7 +22,7 @@ jQuery(function ($) {
 
     $(".recommendations-link").click(function () {
         $('html, body').animate({
-            scrollTop: $("div.FAQ").offset().top
+            scrollTop: $("div.recommendations").offset().top
         }, 700);
     });
 
