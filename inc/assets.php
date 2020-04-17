@@ -32,13 +32,6 @@ function enqueue_assets() {
 	);
 
 	wp_enqueue_style(
-		'prevencia-slick-slider-theme-css',
-		'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css',
-		[],
-		'1.9.0'
-	);
-
-	wp_enqueue_style(
 		'prevencia-style',
 		get_template_directory_uri() . '/assets/css/main.min.css',
 		[ 'prevencia-bootstrap-css' ],

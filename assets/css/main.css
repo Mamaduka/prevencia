@@ -93,6 +93,168 @@ h3.header {
   align-items: center;
 }
 
+.b-nav {
+  position: absolute;
+  z-index: 11;
+}
+
+.b-nav:not(.open) {
+  display: none;
+}
+
+.b-nav li {
+  color: #444444;
+  list-style-type: none;
+  padding: 10px;
+  text-align: left;
+  -webkit-transform: translateX(-250px);
+  transform: translateX(-250px);
+}
+
+.b-nav li:not(.open) {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+.b-nav.open {
+  visibility: visible;
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 140px;
+  left: 0;
+}
+
+.b-nav.open li {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  margin-bottom: 10px;
+}
+
+.b-link {
+  background: transparent;
+  border-left: rgba(68, 68, 68, 0) solid 2px;
+  color: #444444;
+  font-size: 24px;
+  font-weight: 300;
+  margin-left: 30px;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: auto;
+}
+
+.b-menu {
+  background: white;
+  border: white solid 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  padding-left: 15.5px;
+  padding-top: 17.5px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 60px;
+  z-index: 12;
+}
+
+.b-bun {
+  background: #444444;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.b-bun--top {
+  height: 4px;
+  border-radius: 10px;
+  top: 4px;
+  width: 30px;
+}
+
+.b-bun--mid {
+  height: 2px;
+  top: 8px;
+  width: 25px;
+  visibility: hidden;
+}
+
+.b-bun--bottom {
+  height: 4px;
+  top: 12px;
+  border-radius: 10px;
+  width: 30px;
+}
+
+.b-brand {
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  margin-left: 30px;
+  position: relative;
+  text-decoration: none;
+  top: -21.4285714286px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 13;
+}
+
+.b-container {
+  height: 60px;
+  right: 30px;
+  position: absolute;
+  top: 20px;
+}
+
+.b-container:hover:not(.open) .bun-top,
+.b-container:hover:not(.open) .bun-mid,
+.b-container:hover:not(.open) .bun-bottom {
+  background: white;
+}
+
+.b-container.open .b-main {
+  border: #444444 solid 2px;
+}
+
+.b-container.open .b-bun--top {
+  background: #444444;
+  top: 11px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.b-container.open .b-bun--mid {
+  opacity: 0;
+}
+
+.b-container.open .b-bun--bottom {
+  background: #444444;
+  top: 5px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.b-container.open .b-brand {
+  color: #444444;
+}
+
+
 #sticky {
   position: sticky;
   position: -webkit-sticky;
@@ -241,9 +403,6 @@ div.main-block {
 .main-block .statistics .item .date .stopcov a {
   color: rgba(0, 0, 0, 0.2);
 }
-.main-block .statistics .item svg{
-
-}
 
 .statistics .title-item {
   font-size: 20px;
@@ -352,6 +511,7 @@ div.main-block {
 
 .offers .offer-item .category-name .dot-online-shop {
   background: #e84f4f;
+  display: none;
 }
 
 .offers .offer-item .img-circle {
@@ -428,14 +588,19 @@ div.main-block {
 }
 
 .expanded .go-back {
-  padding: 20px 25px;
+  /* padding: 0px 25px; */
 }
 .expanded .go-back button {
   -webkit-appearance: none;
   appearance: none;
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
   font-size: 14px;
+  font-weight: bold;
   border: none;
+  border-radius: 30px;
+  background: #eaeaec;
+  border: 1px solid #eaeaec;
+  padding: 10px 15px;
 }
 
 .expanded .offer-item .img-circle {
@@ -532,6 +697,10 @@ div.main-block {
   margin-left: 5px;
 }
 
+.offers .facetwp-sort select{
+  background: transparent;
+}
+
 .offers .offers-carousel {
   /* background:#F7F7F8; */
   padding: 40px 0 70px 0;
@@ -544,13 +713,31 @@ div.main-block {
   justify-content: space-between;
 }
 
+.slick-prev,
+.slick-next{
+ max-width: 50px;
+ cursor: pointer;
+ position: absolute;
+ z-index: 99;
+ top: calc(40% - 25px);   
+}
+
+.slick-next{
+    right: -50px;
+}
+
+.slick-prev{
+  left: -50px;
+}
+
 .offers .offers-carousel .slick-dots {
   position: initial;
   width: auto;
 }
 
 .offers .offers-carousel .category-slider {
-  width: calc(100% - 25px);
+  width: calc(100% - 100px);
+  margin-left: 50px;
 }
 
 .offers .offers-carousel .category-slider a.slider-item {
@@ -830,7 +1017,8 @@ div.main-block {
 .accordion .open .desc {
   display: block;
   max-height: 100vw;
-  padding-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #eaeaec;
   padding-bottom: 30px;
 }
 
@@ -1240,6 +1428,61 @@ button.show-all {
 
 @media (max-width: 480px) {
 
+  .slick-slide,
+  .slick-list {
+      margin: 0;
+  }
+
+  .add-service-button{
+      background: #fee9b3 !important;
+      font-size: 14px !important;
+  }
+
+  .accordion .heading .circle{
+      top: 5px;
+      right: -45px;
+  }
+
+  .accordion .heading {
+      max-width: 86%;
+      font-size: 16px;
+      padding: 10px 0;
+  }
+
+  .accordion .accordion-item{
+      padding: 0 20px;
+  }
+
+  .fake-news .fake-item *:not(:first-child){
+      padding: 0;
+  }
+
+  .fake-news .fake-item .seemore a{
+      padding: 8px 15px;
+  }
+
+  .fake-news .fake-item{
+      padding: 20px;
+  }
+
+  .offers .offer-item .category-name{
+      padding: 10px 15px;
+      margin-bottom: 15px;
+  }
+
+  .offers .offer-item .img-circle{
+      margin-bottom: 15px;
+  }
+
+  .header{
+      padding: 15px 0;
+  }
+
+  .b-container{
+      top: 0px !important;
+      right: 10px !important;
+  }
+
   .hf-form textarea,
   .hf-form input,
   .hf-form select{
@@ -1375,7 +1618,8 @@ button.show-all {
   }
 
   .fake-news .fake-item .seemore {
-    bottom: 15px;
+    position: static;
+    margin-top: 20px;
   }
 
   .text-container {
