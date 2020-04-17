@@ -10,10 +10,10 @@ $categories = get_terms(['taxonomy' => 'service_category']);
 		<p class="title">სერვისები კატეგორიის მიხედვით</p>
 		<div class="arrow-container">
 			<div class="slick-prev">
-				<img class='a-right control-c next' src="<?php echo Prevencia\the_asset('/img/angle-right.png'); ?>">
+				<img class='a-right control-c next' src="<?php echo Prevencia\the_asset('/img/angle-left.png'); ?>">
 			</div>
 			<div class="slick-next">
-				<img class='a-right control-c next' src="<?php echo Prevencia\the_asset('/img/angle-left.png'); ?>">
+				<img class='a-right control-c next' src="<?php echo Prevencia\the_asset('/img/angle-right.png'); ?>">
 			</div>
 		</div>
 	</div>
