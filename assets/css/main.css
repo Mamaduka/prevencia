@@ -449,18 +449,18 @@ div.main-block {
 }
 
 /********************* OFFER BLOCK ********************/
-.offers .facetwp-checkbox{
+.offers .facetwp-checkbox {
     background: url('../img/filter-unchecked.png') no-repeat;
     padding-left: 32px;
     min-height: 25px;
     margin-bottom: 15px;
 }
 
-.offers .facetwp-checkbox.checked{
+.offers .facetwp-checkbox.checked {
   background: url('../img/filter-checked.png') no-repeat;
 }
 
-.offers .facetwp-counter{
+.offers .facetwp-counter {
     opacity: 0.5;
 }
 
@@ -683,8 +683,12 @@ div.main-block {
   margin-left: 5px;
 }
 
-.offers .facetwp-sort select{
-  background: transparent;
+.offers .facetwp-sort select {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E') no-repeat right 10px top 55%;
+  border: none;
+  padding: 0 5px;
 }
 
 .offers .offers-carousel {
