@@ -82,33 +82,34 @@ jQuery(function ($) {
     $('.category-slider').slick({
         arrows: true,
         dots: false,
-        appendDots: $('.offers-carousel .container'),
         slidesToShow: 4,
         slidesToScroll: 4,
         prevArrow:"<img class='a-left control-c prev slick-prev' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angle_left_font_awesome.svg/1200px-Angle_left_font_awesome.svg.png'>",
         nextArrow:"<img class='a-right control-c next slick-next' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Angle_right_font_awesome.svg/1200px-Angle_right_font_awesome.svg.png'>",
         infinite: true,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-              centermode: true,
-              centerPadding: '25px'
-            }
-          }]
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+        }
+        ]
     });
 
 
