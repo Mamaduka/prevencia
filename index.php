@@ -8,7 +8,7 @@
 			<div class="container">
 			<div class="hero-container">
 					<h3 class='header'><?php echo Prevencia\get_archive_title(); ?></h3>
-					<div class="subtitle">დისტანციური სერვისები რომელიც დაგეხმარებათ სახლიდან გაუსვლელად მიიღოთ ყველანაირი სერვისი</div>
+					<div class="subtitle">Covid-19-ის შესახევ ბევრი დეზინფორმაცია ვრცელდება, იყავით ინფორმირებული, გადაამოწმეთ ყალბი ამბები</div>
 				</div>
 				
 				<?php if ( have_posts() ) : ?>

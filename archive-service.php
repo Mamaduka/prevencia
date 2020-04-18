@@ -12,7 +12,7 @@ get_header(); ?>
 			<div class="container">
 				<div class="hero-container">
 					<h2><?php echo Prevencia\get_archive_title(); ?></h2>
-					<div class="subtitle">დისტანციური სერვისები რომელიც დაგეხმარებათ სახლიდან გაუსვლელად მიიღოთ ყველანაირი სერვისი</div>
+					<div class="subtitle">მარტივად ერთ სივრცეში მიიღეთ ინფორმაცია საქართველოში არსებული დისტანციური სერვისებისა და პროდუქტების შესახებ</div>
 				</div>
 
 				<div class="row">
