@@ -569,7 +569,7 @@ div.main-block {
 .archive-item:not(.expanded) .go-back,
 .archive-item:not(.expanded) .full,
 .archive-item:not(.expanded) .source {
-  display: flex;
+  display: none;
   visibility: hidden;
   max-height: 0;
 }
@@ -579,7 +579,6 @@ div.main-block {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 
 .expanded .go-back button {
   -webkit-appearance: none;
