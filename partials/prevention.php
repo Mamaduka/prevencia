@@ -15,7 +15,6 @@ use function Prevencia\get_stat;
 				საქართველოში არსებული ონლაინ/დისტანციური<br />
 				სერვისების თუ პროდუქტების შესახებ.
 			</p>
-
 		</div>
 
 		<div>
@@ -40,19 +39,19 @@ use function Prevencia\get_stat;
 					<div class="row">
 						<div class="item col-xs-6">
 							<?php echo get_svg(['icon' => 'gamojanmrtelebuli', 'width' => 43, 'height' => 43]); ?>
-							<p class='subtitle'>გამოჯანმრთელებული</p>
+							<p class='subtitle'>გამოჯანმრთელდა</p>
 							<div class="count"><?php echo get_stat('gamojanmrtelebuli'); ?></div>
 						</div>
 
 						<div class="item col-xs-6">
 							<?php echo get_svg(['icon' => 'gardacvlili', 'width' => 43, 'height' => 43]); ?>
-							<p class='subtitle'>გარდაცვლილი</p>
+							<p class='subtitle'>გარდაიცვალა</p>
 							<div class="count"><?php echo get_stat('gardaicvlili'); ?></div>
 						</div>
 
 						<div class="item col-xs-6">
 							<?php echo get_svg(['icon' => 'stacionarshi', 'width' => 43, 'height' => 43]); ?>
-							<p class='subtitle'>სტაციონარში მყოფი</p>
+							<p class='subtitle'>სტაციონარში იმყოფება</p>
 							<div class="count"><?php echo get_stat('statsionari'); ?></div>
 						</div>
 
