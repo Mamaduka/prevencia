@@ -1160,7 +1160,8 @@ footer {
 
 .hero-container {
   background: url("../img/hero-bg.png") no-repeat;
-  background-size: contain;
+  background-size: cover;
+  border-radius: 15px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -1247,10 +1248,23 @@ footer {
   font-size: 14px !important;
 }
 
-@media only screen and (max-width: 1440px) and (min-width: 1200px) {
+@media only screen and (max-width: 1440px) and (min-width: 1140px) {
   .description,
   .font14 {
     font-size: 13px !important;
+  }
+
+  .menu li{
+      margin-right: 10px !important;
+  }
+
+  a.add-service-button{
+      margin-right: 5px;
+      padding: 12px 30px;
+  }
+
+  .header-right img{
+      max-height: 46px;
   }
 }
 
@@ -1362,7 +1376,7 @@ button.show-all {
 
   .hero-container{
       padding: 15px;
-      height: 106px;
+      height: 200px;
       border-radius: 10px;
   }
 
@@ -1428,6 +1442,10 @@ button.show-all {
 }
 
 @media (max-width: 480px) {
+
+  .hero-container{
+      height: 106px;
+  }
 
   .offers-carousel .title{
     font-size: 14px;
