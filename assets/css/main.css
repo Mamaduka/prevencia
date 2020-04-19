@@ -372,6 +372,10 @@ div.main-block {
   width: 520px;
 }
 
+.main-block .statistics .row {
+  margin: 0 25px;
+}
+
 .main-block .statistics .title {
   font-size: 24px;
   font-family: helvetica-medium;
@@ -393,7 +397,6 @@ div.main-block {
 .main-block .statistics .item {
   margin-top: 10px;
   margin-bottom: 40px;
-  padding: 0 55px;
 }
 
 .main-block .statistics .item .date {
@@ -1359,9 +1362,7 @@ button.show-all {
 
   .hero-container{
       padding: 15px;
-
       height: 106px;
-
       border-radius: 10px;
   }
 
@@ -1370,7 +1371,6 @@ button.show-all {
       padding: 0;
       font-size: 25px;
   }
-
 
   .offers .offer-item .description .more-text {
     display: none;
@@ -1389,33 +1389,36 @@ button.show-all {
     margin: 0 auto;
   }
 
-  #statistics-tabs li{
+  #statistics-tabs li {
       margin: 0;
       width: 48%;
   }
 
-  #statistics-tabs li a{
-      width: 100%;
-      padding: 8px 15px;
+  #statistics-tabs li a {
+    width: 100%;
+    padding: 8px 15px;
   }
 
-  .statistics .title-item{
-      padding: 0 25px;
+  .statistics .title-item {
+    padding: 0 25px;
   }
 
-  #statistics-tabs{
-      padding: 0 25px;
-      justify-content: space-between;
-      display: flex;
+  #statistics-tabs {
+    padding: 0 25px;
+    justify-content: space-between;
+    display: flex;
   }
 
   #statistics-tabs li a.inactive{
-      padding: 8px 15px;
+    padding: 8px 15px;
   }
 
-  .main-block .statistics .item{
-      padding: 0 40px;
-      margin-bottom: 25px;
+  .main-block .statistics .row {
+    margin: 0 10px;
+  }
+
+  .main-block .statistics .item {
+    margin-bottom: 25px;
   }
 
   div.main-block{
@@ -1429,17 +1432,17 @@ button.show-all {
   .offers-carousel .title{
     font-size: 14px;
     margin: 0;
-}
+  }
 
-.arrow-container div{
-    padding: 10px;
-    margin-left: 5px;
-}
+  .arrow-container div {
+      padding: 10px;
+      margin-left: 5px;
+  }
 
-.offers-carousel .container{
-    display: flex;
-    align-items: center;
-}
+  .offers-carousel .container {
+      display: flex;
+      align-items: center;
+  }
 
   .slick-slide,
   .slick-list {
@@ -1527,8 +1530,6 @@ button.show-all {
   .hero-container h2{
       font-size: 25px;
   }
-
-
 
   .hero-container{
       background-size: auto;

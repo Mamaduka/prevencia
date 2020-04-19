@@ -37,30 +37,31 @@ use function Prevencia\get_stat;
 
 
 					<div class="row">
-						<div class="item col-xs-6">
+						<div class="item col">
 							<?php echo get_svg(['icon' => 'gamojanmrtelebuli', 'width' => 43, 'height' => 43]); ?>
 							<p class='subtitle'>გამოჯანმრთელდა</p>
 							<div class="count"><?php echo get_stat('gamojanmrtelebuli'); ?></div>
 						</div>
 
-						<div class="item col-xs-6">
+						<div class="item col">
 							<?php echo get_svg(['icon' => 'gardacvlili', 'width' => 43, 'height' => 43]); ?>
 							<p class='subtitle'>გარდაიცვალა</p>
 							<div class="count"><?php echo get_stat('gardaicvlili'); ?></div>
 						</div>
-
-						<div class="item col-xs-6">
+						<div class="w-100"></div>
+						<div class="item col">
 							<?php echo get_svg(['icon' => 'stacionarshi', 'width' => 43, 'height' => 43]); ?>
 							<p class='subtitle'>სტაციონარში იმყოფება</p>
 							<div class="count"><?php echo get_stat('statsionari'); ?></div>
 						</div>
 
-						<div class="item col-xs-6">
+						<div class="item col">
 							<?php echo get_svg(['icon' => 'karantini', 'width' => 43, 'height' => 43]); ?>
 							<p class='subtitle'>კარანტინის რეჟიმში</p>
 							<div class="count"><?php echo get_stat('karantini'); ?></div>
 						</div>
-						<hr />
+
+						<div class="w-100"></div>
 
 						<div class="item col-md-12">
 							<p class='subtitle'>ბოლოს განახლებული</p>
