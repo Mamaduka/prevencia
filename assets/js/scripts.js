@@ -13,29 +13,9 @@ jQuery(function ($) {
         } );
     } )
 
-    $(".add-item").click(function () {
-        $('html, body').animate({
-            scrollTop: $("div.service-form").offset().top
-        }, 700);
-    });
-
-
-    // $(".recommendations-link").click(function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("div.recommendations").offset().top
-    //     }, 700);
-    // });
-
-    // $(".add-service-button").click(function () {
-    //     $('html, body').animate({
-    //         scrollTop: $("div.service-form").offset().top
-    //     }, 700);
-    // });
-
     $(".hf-form div.fake-input").click(function () {
         $("#logo").click();
     });
-
 
     if (document.getElementById('logo')) {
         document.getElementById('logo').addEventListener('change', function (ev) {
@@ -84,11 +64,11 @@ jQuery(function ($) {
 $('.slider').slick({
     arrows: false
   })
-  
+
   $('.slick-prev').click(function(){
     $('.category-slider').slick('slickPrev');
   })
-  
+
   $('.slick-next').click(function(){
     $('.category-slider').slick('slickNext');
   })
@@ -146,7 +126,7 @@ $('.slider').slick({
 
     $('#statistics-tabs li a').click(function () {
         var t = $(this).attr('id');
-        if ($(this).hasClass('inactive')) { //this is the start of our condition 
+        if ($(this).hasClass('inactive')) { //this is the start of our condition
             $('#statistics-tabs li a').addClass('inactive');
             $(this).removeClass('inactive');
 
@@ -189,5 +169,5 @@ $('.slider').slick({
         $('.facetwp-pager').show();
     });
 
-    
+
 });

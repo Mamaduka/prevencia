@@ -20,10 +20,6 @@ yellow - #FEE9B3
   src: url("../fonts/helvetica-bold.otf");
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: helvetica-regular !important;
   padding-bottom: 50px;
