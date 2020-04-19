@@ -34,7 +34,7 @@
 			<li><a class="b-link" href="<?php echo home_url('/about'); ?>">ჩვენ შესახებ</a></li>
 			<li><a class="b-link" href="<?php echo home_url('/terms'); ?>">პირობები</a></li>
 			<li>
-			<a class='b-link add-service-button' href="#" class='contact-link'>სერვისის დამატება</a>
+			<a class='b-link add-service-button' href="<?php echo is_home() ? '#' : home_url('/#service-form') ?>" class='contact-link'>სერვისის დამატება</a>
 				<a href="https://www.facebook.com/prevencia.ge" class="main-link" target="_blank" rel="noopener noreferrer">
 					<img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" />
 				</a>

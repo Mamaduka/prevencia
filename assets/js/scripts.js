@@ -15,22 +15,22 @@ jQuery(function ($) {
 
     $(".add-item").click(function () {
         $('html, body').animate({
-            scrollTop: $("div.sercive-form").offset().top
+            scrollTop: $("div.service-form").offset().top
         }, 700);
     });
 
 
-    $(".recommendations-link").click(function () {
-        $('html, body').animate({
-            scrollTop: $("div.recommendations").offset().top
-        }, 700);
-    });
+    // $(".recommendations-link").click(function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("div.recommendations").offset().top
+    //     }, 700);
+    // });
 
-    $(".add-service-button").click(function () {
-        $('html, body').animate({
-            scrollTop: $("div.sercive-form").offset().top
-        }, 700);
-    });
+    // $(".add-service-button").click(function () {
+    //     $('html, body').animate({
+    //         scrollTop: $("div.service-form").offset().top
+    //     }, 700);
+    // });
 
     $(".hf-form div.fake-input").click(function () {
         $("#logo").click();

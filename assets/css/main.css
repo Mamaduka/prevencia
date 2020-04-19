@@ -20,6 +20,10 @@ yellow - #FEE9B3
   src: url("../fonts/helvetica-bold.otf");
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: helvetica-regular !important;
   padding-bottom: 50px;
@@ -1263,7 +1267,8 @@ footer {
       padding: 12px 30px;
   }
 
-  .header-right img{
+  .header-right img,
+  .footer-right img{
       max-height: 46px;
   }
 }
@@ -1364,6 +1369,11 @@ button.show-all {
 }
 
 @media (max-width: 768px) {
+
+  .text-container {
+    padding: 0;
+  }
+
 
   .footer-right,
   .footer-content .menu {
@@ -1654,10 +1664,7 @@ button.show-all {
     margin-top: 20px;
   }
 
-  .text-container {
-    padding: 0;
-  }
-
+ 
   #accordion .desc {
     height: unset !important;
   }
