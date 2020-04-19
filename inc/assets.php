@@ -5,7 +5,7 @@
 
 namespace Prevencia;
 
-const VERSION = '180420';
+const VERSION = '190420';
 
 /**
  * Register and enqueue assets.
