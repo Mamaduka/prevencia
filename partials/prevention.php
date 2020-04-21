@@ -24,18 +24,15 @@ use function Prevencia\get_stat;
 					დაფიქსირებული შემთხვევა <span><?php echo Prevencia\get_stat('dadasturebuli'); ?> </span>
 				</div>
 				<ul id="statistics-tabs">
-				<li><a id="tab1">სტატისტიკა</a></li>
-					<li><a id="tab2">მონაცემები</a></li>
+				<li><a id="tab1">მონაცემები</a></li>
+				<li><a id="tab2">სტატისტიკა</a></li>
+				
 					
 				</ul>
 
-				<div id="tab1C" class="tab-item" style="padding:46px 20px">
-					<canvas id="canvas" width="500" height="400"></canvas>
-				</div>
+		
 
-				<div id="tab2C" class="tab-item">
-
-
+				<div id="tab1C" class="tab-item">
 					<div class="row">
 						<div class="item col">
 							<?php echo get_svg(['icon' => 'gamojanmrtelebuli', 'width' => 43, 'height' => 43]); ?>
@@ -70,6 +67,9 @@ use function Prevencia\get_stat;
 					</div>
 				</div>
 
+				<div id="tab2C" class="tab-item" style="padding:46px 20px">
+					<canvas id="canvas" width="500" height="400"></canvas>
+				</div>
 			</div>
 		</div>
 
