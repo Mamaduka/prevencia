@@ -74,6 +74,8 @@ h3.header {
   font-family: helvetica-bold;
   font-size: 35px;
   margin: 40px 0;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -85,6 +87,8 @@ h3.header {
 
 .header-right{
   display: block;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .header {
@@ -303,6 +307,8 @@ div.main-block {
   font-family: helvetica-regular;
   display: inline-block;
   margin-right: 35px;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .menu li:last-child {
@@ -331,7 +337,8 @@ div.main-block {
   background: #fee9b3;
 }
 
-.menu li a:hover {
+.menu li a:hover,
+.menu li a.active {
   color: black;
 }
 
@@ -370,6 +377,8 @@ div.main-block {
   background: #fff;
   padding: 35px 0 0px 0;
   width: 520px;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .main-block .statistics .row {
@@ -494,6 +503,8 @@ div.main-block {
 
 .offers .category-name a {
   color: currentColor;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .offers .category-name a:active,
@@ -798,6 +809,8 @@ div.main-block {
     display: block;
     transition: all 0.2s;
     text-decoration: none;
+    font-feature-settings: "case" on;
+    text-transform: uppercase;
 }
 
 .offers .see-all:hover{
@@ -881,11 +894,14 @@ div.main-block {
   width: calc(100% - 250px);
   border-radius: 30px;
   margin: 0 auto;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .fake-news h3.header {
   margin: 0;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .fake-news p.excerpt {
@@ -901,6 +917,11 @@ div.main-block {
   transition: box-shadow 0.3s;
   border: 1px solid #fff;
   margin-bottom: 30px;
+}
+
+.fake-news .light-btn{
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .fake-news .fake-item:hover{
@@ -960,6 +981,8 @@ div.main-block {
   width: 140px;
   text-decoration: none;
   text-align: center;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 /***************** Accordion **************/
@@ -990,6 +1013,8 @@ div.main-block {
   border: none !important;
   padding: 30px 0;
   margin: 10px 0;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .accordion .heading .circle {
