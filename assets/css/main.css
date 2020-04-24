@@ -362,6 +362,8 @@ div.main-block {
 .main-block .content h3 {
   font-family: helvetica-bold;
   font-size: 30px;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .main-block .content .subtitle {
@@ -370,6 +372,8 @@ div.main-block {
   color: black;
   line-height: 48px;
   margin-bottom: 40px;
+  font-feature-settings: "case" on;
+  text-transform: uppercase;
 }
 
 .main-block .statistics {
@@ -424,7 +428,7 @@ div.main-block {
 }
 
 .statistics .title-item span {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1);
 }
 
 
