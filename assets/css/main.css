@@ -1261,6 +1261,7 @@ footer {
 
 .blog-inner-container .source {
   margin-top: 50px;
+  clear: both;
 }
 
 .blog-inner-container .source a {
@@ -1275,6 +1276,25 @@ footer {
 
 .font14 {
   font-size: 14px !important;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1140px) {
