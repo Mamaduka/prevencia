@@ -9,10 +9,7 @@
 		</div>
 		<div>
 			<ul class="menu">
-				<li><a href="<?php echo home_url('/remote-services'); ?>">დისტანციური სერვისები</a></li>
-				<li><a href="<?php echo home_url('/fake-news'); ?>" >ყალბი ამბები</a></li>
-				<li><a href="<?php echo home_url('#faq'); ?>" class='recommendations-link'>რეკომენდაციები</a></li>
-				<li><a href="<?php echo home_url('/about'); ?>" >ჩვენ შესახებ</a></li>
+				<?php echo Prevencia\render_main_nav(); ?>
 			</ul>
 		</div>
 		</div>
@@ -27,14 +24,9 @@
 	<div>
 		<!-- Navigation -->
 		<div class="b-nav">
-			<li><a class="b-link" href="<?php echo home_url('/remote-services'); ?>">დისტანციური სერვისები</a>
-			</li>
-			<li><a class="b-link recommendations-link" href="<?php echo home_url('#faq'); ?>">რეკომენდაციები</a></li>
-			<li><a class="b-link" href="<?php echo home_url('/fake-news'); ?>">ყალბი ამბები</a></li>
-			<li><a class="b-link" href="<?php echo home_url('/about'); ?>">ჩვენ შესახებ</a></li>
-			<li><a class="b-link" href="<?php echo home_url('/terms'); ?>">პირობები</a></li>
+			<?php echo Prevencia\render_main_nav( true ); ?>
 			<li>
-			<a class='b-link add-service-button' href="<?php echo is_home() ? '#' : home_url('/#service-form') ?>" class='contact-link'>სერვისის დამატება</a>
+				<a class='b-link add-service-button' href="<?php echo is_home() ? '#' : home_url('/#service-form') ?>" class='contact-link'>სერვისის დამატება</a>
 				<a href="https://www.facebook.com/prevencia.ge" class="main-link" target="_blank" rel="noopener noreferrer">
 					<img src="<?php echo Prevencia\the_asset('/img/facebook.png'); ?>" alt="facebook" />
 				</a>
@@ -48,7 +40,6 @@
 				<div class="b-bun b-bun--mid"></div>
 				<div class="b-bun b-bun--bottom"></div>
 			</div>
-
 		</div>
 	</div>
 </div>

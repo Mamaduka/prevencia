@@ -250,3 +250,70 @@ function get_svg( $args = [] ) {
 	// Get the buffer and return.
 	return ob_get_clean();
 }
+
+/**
+ * Get current page/archive slug.
+ *
+ * @return string
+ */
+function get_current_page() {
+	if ( is_post_type_archive( 'service' ) ) {
+		return 'remote-services';
+	}
+
+	if ( is_post_type_archive( 'fake-news' ) || is_singular( 'fake-news' ) ) {
+		return 'fake-news';
+	}
+
+	// About page.
+	if ( is_page( 24 ) ) {
+		return 'about';
+	}
+
+	// Terms page.
+	if ( is_page( 3 ) ) {
+		return 'terms';
+	}
+
+	return '';
+}
+
+/**
+ * Renders main navigation list items.
+ * Should be placed inside proper wrapper.
+ *
+ * @param bool $is_burger
+ * @return string
+ */
+function render_main_nav( $is_burger = false ) {
+	$items = [
+		'remote-services' => 'დისტანციური სერვისები',
+		'fake-news'       => 'ყალბი ამბები',
+		'#faq'            => 'რეკომენდაციები',
+		'about'           => 'ჩვენ შესახებ'
+	];
+
+	if ( $is_burger ) {
+		$items['terms'] = 'პირობები';
+	}
+
+	$classes = [
+		'burger' => $is_burger ? 'b-link' : false,
+	];
+
+	$nav     = '';
+	$current = get_current_page();
+
+	foreach ( $items as $slug => $label ) {
+		$classes['current'] = ( $slug === $current ) ? 'active' : '';
+
+		$nav .= sprintf(
+			'<li><a href="%1$s" class="%2$s">%3$s</a></li>',
+			home_url( $slug ),
+			implode( ' ', $classes ),
+			$label
+		);
+	}
+
+	return $nav;
+}
