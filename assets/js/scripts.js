@@ -13,6 +13,14 @@ jQuery(function ($) {
         } );
     } )
 
+
+
+    $(".add-item").click(function () {
+        $('html, body').animate({
+            scrollTop: $("div.service-form").offset().top
+        }, 700);
+    });
+
     $(".hf-form div.fake-input").click(function () {
         $("#logo").click();
     });
